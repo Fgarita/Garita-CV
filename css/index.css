@@ -226,8 +226,8 @@ p {
 }
 
 #cover {
-  background-image: url("https://Fgarita.github.io/Garita-CV/images/1678039129113.jpeg");
-  background-size: contain;
+  background-image: url("https://Fgarita.github.io/Garita-CV/images/ingeniería-en-sistemas-computacionales-1.jpg");
+  background-size: cover;
   background-position: center;
   position: relative;
   z-index: 1;
