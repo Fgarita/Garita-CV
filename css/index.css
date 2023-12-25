@@ -226,11 +226,12 @@ p {
 }
 
 #cover {
-  background-image: url("https://frangs86.github.io/Garita-CV/images/IMG_20191216_183631.jpg");
-  background-size: cover;
+  background-image: url("https://Fgarita.github.io/Garita-CV/1678039129113.jpeg");
+  background-size: contain;
   background-position: center;
   position: relative;
   z-index: 1;
+  background-repeat: no-repeat;
 }
 
 #cover::after {
