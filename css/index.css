@@ -534,6 +534,21 @@ div#Message {
 }
 /* End About Section */
 
+/* profile Section */
+
+#profile .profile-top {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 95%;
+}
+
+#profile .profile-top p {
+  margin-top: 80px;
+  color: black;
+  text-align: justify;
+}
+/* End profile Section */
+
 /* objectives Section */
 
 #objectives .objectives-top {
