@@ -73,6 +73,69 @@ p {
   background-color: rgb(0, 74, 134);
 }
 
+.cta1 {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  /*border: 3px solid rgb(0, 74, 134);*/
+  border-radius: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-right: 20px;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+
+.cta1:hover {
+  color: white;
+  background-color: rgb(0, 134, 0);
+}
+
+.cta2 {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  /*border: 3px solid rgb(0, 74, 134);*/
+  border-radius: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-right: 20px;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+
+.cta2:hover {
+  color: white;
+  background-color: rgb(0, 74, 134);
+}
+
+.cta3 {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  /*border: 3px solid rgb(0, 74, 134);*/
+  border-radius: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-right: 20px;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+
+.cta3:hover {
+  color: white;
+  background-color: rgb(108, 117, 125);
+}
+
 /* Header section */
 #header {
   position: fixed;
@@ -321,6 +384,28 @@ div#Message {
   margin-bottom: 10%;
   position: absolute;
   bottom: 0;
+}
+
+.right-buttons {
+  position: absolute;
+  bottom: 10%;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px; /* Añade espacio entre los botones */
+}
+
+.right-buttons a.cta1 i {
+  margin-right: 10px; /* Añade espacio entre el ícono y el texto */
+}
+
+.right-buttons a.cta2 i {
+  margin-right: 10px; /* Añade espacio entre el ícono y el texto */
+}
+
+.right-buttons a.cta3 i {
+  margin-right: 10px; /* Añade espacio entre el ícono y el texto */
 }
 /* End Hero Section */
 
