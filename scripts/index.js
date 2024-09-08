@@ -27,3 +27,34 @@ menu_item.forEach((item) => {
     mobile_menu.classList.toggle("active");
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const accordions = document.querySelectorAll(".accordion-title");
+  let lastScrollPosition = 0; // Variable para guardar la posición de desplazamiento
+
+  accordions.forEach((title) => {
+    title.addEventListener("click", () => {
+      const accordion = title.parentElement;
+
+      if (!accordion.classList.contains("active")) {
+        // Si se está abriendo el acordeón, guarda la posición de desplazamiento actual
+        lastScrollPosition = window.scrollY;
+      }
+
+      // Alterna la clase activa del acordeón actual
+      accordion.classList.toggle("active");
+
+      // Cierra otros acordeones
+      document.querySelectorAll(".accordion").forEach((otherAccordion) => {
+        if (otherAccordion !== accordion) {
+          otherAccordion.classList.remove("active");
+        }
+      });
+
+      // Si el acordeón se cierra, restablece la posición de desplazamiento
+      if (!accordion.classList.contains("active")) {
+        window.scrollTo(0, lastScrollPosition);
+      }
+    });
+  });
+});
