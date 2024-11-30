@@ -1243,8 +1243,136 @@ div#Message {
     text-align: left;
     padding-left: 20px;
   }
-  /* End contact  */
+
+/* Formulario de contacto */
+#contact .contact-form {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+#contact .contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+#contact .contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Más flexible en pantallas pequeñas */
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact .contact-form .form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#contact .contact-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #555;
+}
+
+#contact .contact-form .form-group input,
+#contact .contact-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+#contact .contact-form .form-group input:focus,
+#contact .contact-form .form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#contact .contact-form .form-group textarea {
+  resize: none;
+}
+
+#contact .contact-form .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact .contact-form .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  #contact .contact-form form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  #contact .contact-form h2 {
+    font-size: 1.5rem;
+  }
+
+  #contact .contact-form .form-group input,
+  #contact .contact-form .form-group textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  #contact .contact-form .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  /* Asegurar que el formulario no esté pegado a los bordes de la pantalla */
+  #contact .contact-form {
+    padding: 20px;
+  }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 468px) {
+  /* Ajustar el tamaño del formulario */
+  #contact .contact-form {
+    padding: 15px; /* Reducir el padding para más espacio */
+  }
+
+  #contact .contact-form .form-group input,
+  #contact .contact-form .form-group textarea {
+    font-size: 0.85rem;
+    padding: 7px;
+  }
+
+  #contact .contact-form .btn {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
+}
+
+
+  /* End contact  */
+
 /* End Media Query For Tablet */
 
 /* Media Query For Desktop */
@@ -1281,3 +1409,4 @@ div#Message {
   }
 }
 /* End  Media Query For Desktop */
+}
