@@ -107,6 +107,7 @@
           <h2>Bachelor of Computer Systems Engineering</h2>
           <p>Fidélitas University <br>
           2019 - 2023</p>
+          <div class="icon"><img src="./images/Titulo 3.PNG"/></div>
         </div>
       </div>
       </div> 
@@ -150,11 +151,27 @@
           <div class="popup-window">JavaScript Essentials 1</div>
         </div>
       </div>
+
+      <!-- Quinto certificado -->
+      <div class="certificates-item">
+        <div class="icon">
+          <img src="./images/introduction-to-data-science.png" alt="CISCO" />
+          <div class="popup-window">Introduction to Data Science</div>
+        </div>
+      </div>
+
+            <!-- Sexto certificado -->
+      <div class="certificates-item">
+        <div class="icon">
+          <img src="./images/English B1.jpg" alt="Universidad Fidelitas" />
+          <div class="popup-window">Intermediate English level</div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+</div>
 </section>
-
-
   <section id="skills">
     <div class="skills container">
       <div class="skills-top">
@@ -304,23 +321,25 @@ The main objective of this project is the creation of an appointment management 
       </div>
     </div>
     <!-- Formulario de contacto -->
-    <div class="contact-form">
-      <h2>Send us a message</h2>
-      <form id="form">
-        <div class="form-group">
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" name="email" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-          <input type="text" id="subject" name="subject" placeholder="Subject" required />
-        </div>
-        <div class="form-group">
-          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-        </div>
-        <button type="submit" onclick="sendMail()" class="btn" >Send Message</button>
-      </form>
+    <div class="contact-item">
+      <div class="contact-form">
+        <h2 id="message-status" class="status-message">Send us a message</h2>
+        <form id="form" onsubmit="return sendMail(event)">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required />
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>

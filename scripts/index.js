@@ -118,27 +118,48 @@ document.addEventListener("DOMContentLoaded", () => {
   // Llamar a la función para mostrar las habilidades
 displaySkills();
 
-function sendMail(){ 
+function sendMail(event) {
+  event.preventDefault(); // Evita el comportamiento predeterminado del formulario
+
   let parms = {
-
     name: document.getElementById("name").value,
-    email : document.getElementById("email").value,
-    subject : document.getElementById("subject").value,
-    message : document.getElementById("message").value,
-    
-  }
-  
-  // Enviar el correo a través de EmailJS
-  emailjs.send("service_bivy7f6", "template_sk3r8mj", parms)
-    .then(function(response) {
-      // Mostrar mensaje de éxito
-      alert("Email Sent!!");
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
 
-      // Limpiar el formulario después de enviar el correo
-      document.getElementById("form").reset(); // Aquí 'form' es el id del formulario
+  // Selecciona el elemento <h2> para mostrar los mensajes
+  const messageStatus = document.getElementById("message-status");
 
-    }, function(error) {
-      // Si ocurre un error, mostrar el error
-      alert("Error al enviar el correo: " + JSON.stringify(error));
+  // Mantén el mensaje inicial
+  const initialMessage = "Send us a message";
+
+  emailjs
+    .send("service_bivy7f6", "template_sk3r8mj", parms)
+    .then(function (response) {
+      // Cambia el texto y estilo a éxito
+      messageStatus.textContent = "Your message has been sent successfully!";
+      messageStatus.className = "status-message success";
+
+      // Limpiar el formulario
+      document.getElementById("form").reset();
+
+      // Restaurar el mensaje inicial después de 5 segundos
+      setTimeout(() => {
+        messageStatus.textContent = initialMessage;
+        messageStatus.className = "status-message";
+      }, 5000);
+    })
+    .catch(function (error) {
+      // Cambia el texto y estilo a error
+      messageStatus.textContent = "Failed to send the message. Please try again.";
+      messageStatus.className = "status-message error";
+
+      // Restaurar el mensaje inicial después de 5 segundos
+      setTimeout(() => {
+        messageStatus.textContent = initialMessage;
+        messageStatus.className = "status-message";
+      }, 5000);
     });
 }
+
