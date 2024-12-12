@@ -890,7 +890,8 @@ div#Message {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-image: linear-gradient(60deg, #090a0a 0%, #0653a5 100%);
+  background-color: rgba(31, 30, 30, 0.24);
   opacity: 0.8; /* Ajustado para mejor legibilidad */
   z-index: -1;
 }
