@@ -153,7 +153,7 @@ p {
 }
 
 #header .nav-bar {
-  display: flex;
+  display: contents;
   align-items: center;
   justify-content: space-between;
   width: 100%;
