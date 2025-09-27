@@ -78,7 +78,6 @@ p {
   padding: 10px 30px;
   color: white;
   background-color: transparent;
-  /*border: 3px solid rgb(0, 74, 134);*/
   border-radius: 10px;
   font-size: 2rem;
   text-transform: uppercase;
@@ -517,10 +516,12 @@ div#Message {
 }
 
 #about .col-left .about-img {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  max-width: 100%;
   position: relative;
   border: 10px solid white;
+  object-fit: contain;
+  top: 50px;
 }
 
 #about .col-left .about-img::after {
@@ -710,6 +711,22 @@ div#Message {
   #certificates .certificates-item .popup-window {
     font-size: 1.5rem;
   }
+}
+
+.popup-window a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.popup-window a:hover {
+  text-decoration: underline;
+}
+
+.popup-window {
+  pointer-events: auto;
 }
 
 /* End certificates Section */
@@ -1266,137 +1283,136 @@ div#Message {
     padding-left: 20px;
   }
 
-/* Formulario de contacto */
-#contact .contact-form {
-  width: 100%;
-  margin-top: 50px;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
+  /* Formulario de contacto */
+  #contact .contact-form {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 
-#contact .contact-form h2 {
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  color: #333;
-}
+  #contact .contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
 
-#contact .contact-form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%; /* Más flexible en pantallas pequeñas */
-  max-width: 600px; /* Ancho máximo del formulario */
-  margin: 0 auto;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  #contact .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Más flexible en pantallas pequeñas */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
-#contact .contact-form .form-group {
-  width: 100%;
-  margin-bottom: 15px;
-}
+  #contact .contact-form .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 
-#contact .contact-form .form-group input,
-#contact .contact-form .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-  background-color: #fff;
-  transition: border-color 0.3s;
-}
+  #contact .contact-form .form-group input,
+  #contact .contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s;
+  }
 
-#contact .contact-form .form-group input:focus,
-#contact .contact-form .form-group textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
+  #contact .contact-form .form-group input:focus,
+  #contact .contact-form .form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
 
-#contact .contact-form .form-group textarea {
-  resize: none;
-}
+  #contact .contact-form .form-group textarea {
+    resize: none;
+  }
 
-#contact .contact-form .btn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
+  #contact .contact-form .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
 
-#contact .contact-form .btn:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-}
+  #contact .contact-form .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
 
-.status-message {
-  font-size: 16px;
-  margin-bottom: 15px;
-  text-align: center;
-  transition: color 0.3s, background-color 0.3s;
-}
+  .status-message {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: color 0.3s, background-color 0.3s;
+  }
 
-.status-message.success {
-  color: #155724;
-  background-color: #d4edda;
-  border: 1px solid #c3e6cb;
-  padding: 10px;
-  border-radius: 5px;
-}
+  .status-message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-.status-message.error {
-  color: #721c24;
-  background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  padding: 10px;
-  border-radius: 5px;
-}
-
+  .status-message.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
   /* End contact  */
 
-/* End Media Query For Tablet */
+  /* End Media Query For Tablet */
 
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-  /* header */
-  #header .hamburger {
-    display: none;
-  }
+  /* Media Query For Desktop */
+  @media only screen and (min-width: 1200px) {
+    /* header */
+    #header .hamburger {
+      display: none;
+    }
 
-  #header .nav-list ul {
-    position: initial;
-    display: block;
-    height: auto;
-    width: fit-content;
-    background-color: transparent;
-  }
+    #header .nav-list ul {
+      position: initial;
+      display: block;
+      height: auto;
+      width: fit-content;
+      background-color: transparent;
+    }
 
-  #header .nav-list ul li {
-    display: inline-block;
-  }
+    #header .nav-list ul li {
+      display: inline-block;
+    }
 
-  #header .nav-list ul li a {
-    font-size: 1.8rem;
-  }
+    #header .nav-list ul li a {
+      font-size: 1.8rem;
+    }
 
-  #header .nav-list ul a:after {
-    display: none;
-  }
-  /* End header */
+    #header .nav-list ul a:after {
+      display: none;
+    }
+    /* End header */
 
-  #awards .awards-bottom .awards-item {
-    flex-basis: 22%;
-    margin: 1.5%;
+    #awards .awards-bottom .awards-item {
+      flex-basis: 22%;
+      margin: 1.5%;
+    }
   }
-}
-/* End  Media Query For Desktop */
+  /* End  Media Query For Desktop */
 }
