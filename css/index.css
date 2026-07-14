@@ -619,12 +619,12 @@ div#Message {
 }
 
 #certificates .certificates-item {
-  text-align: left;
+  text-align: center;
   flex-basis: 20%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   padding: 20px;
   border-radius: 10px;
   background-size: cover;
@@ -632,6 +632,13 @@ div#Message {
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+
+#certificates .certificates-item .cert-date {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  letter-spacing: 0.3px;
 }
 
 #certificates .certificates-item::after {
