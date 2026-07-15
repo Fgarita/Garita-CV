@@ -82,7 +82,7 @@
       </div>
       <div class="col-right">
         <h1 class="section-title">About <span>me</span></h1>
-        <p>Hi there! <br>I am José Francisco Garita Sánchez, a Systems Engineer with a great passion for technology and innovation. Since I was a child I have been
+        <p>Hi there! <br>I am José Francisco Garita Sánchez, a Systems Engineer with a great passion for technology and innovation. I have been
            fascinated by understanding how things work and finding creative solutions to problems. Throughout my education, I have developed skills in software development,
             database management and computer security, applying my knowledge in academic and personal projects. I consider myself a curious person, self-taught and committed
              to continuous learning. I enjoy facing new challenges, collaborating in teams and contributing with technological solutions that generate a positive impact.
@@ -227,6 +227,15 @@
 </div>
 </div>
 </section>
+<section id="currently-learning">
+  <div class="currently-learning container">
+    <h1 class="section-title">CURRENTL<span>Y L</span>EARNING</h1>
+    <div class="learning-item">
+      <span class="learning-dot"></span>
+      <p><strong>Advanced English</strong> — Universidad Fidélitas, working toward stronger fluency for technical communication in international teams.</p>
+    </div>
+  </div>
+</section>
   <section id="skills">
     <div class="skills container">
       <div class="skills-top">
@@ -268,8 +277,10 @@
           <div class="project-info">
             <h1>Final Degree Project</h1>
             <h2>Web sigma project</h2>
-            <p>The project presented is a practical and applied implementation in a real environment with an effective client. It was developed as an integral part of the culmination of my academic training, in collaboration with fellow group members.
-               The main objective of this project is the creation of an appointment management system for a car wash service. Its purpose is to allow users to schedule appointments efficiently. In addition, it enables the establishment's employees to manage customer appointments, as well as manage inventories, user profiles and keep track of the finances associated with the car wash business.</p>
+            <p>Built as the capstone project for my Systems Engineering degree, in collaboration with a small team and a real client. The system covers four core business 
+              functions in a single platform: customer appointment scheduling, employee appointment management, inventory control, and financial tracking for the car wash 
+              business — replacing what was previously handled manually with one web-based tool. I was responsible for the backend logic in C# and ASP.NET MVC, connected to a 
+              SQL Server database designed to support all four modules.</p>
                <a href="https://github.com/Fgarita/Proyecto-Sigma-Web.git" target="_blank" class="py">view project</a>
           </div>
           <div class="project-img">
@@ -293,7 +304,9 @@
           <div class="project-info">
             <h1>Community Service</h1>
             <h2>Asociación Comedor lnfantil Cosechando Sonrisas</h2>
-            <p>As part of my training in Computer Systems Engineering at Fidélitas University, I did community work at the Asociación Comedor Infantil Cosechando Sonrisas. During this period, I dedicated 150 hours to design for future development an Inventory Management System for the organization, which operates on a non-profit basis and focuses on providing food to needy children.</p>
+            <p>150 hours of community work for a non-profit organization that provides food to children in need, as part of my training in Computer Systems Engineering at 
+              Fidélitas University. I designed the foundation for a future Inventory Management System: requirements analysis, a normalized database structure, an interface
+              prototype for tracking incoming and outgoing donations, and full technical documentation to guide the organization's future development team.</p>
           </div>
           <div class="project-img">
             <div class="tech-review">
@@ -312,12 +325,10 @@
           <div class="project-info">
             <h1>CRUD in C++</h1>
             <h2>Personal Project</h2>
-            <p>This project demonstrates a complete implementation of a CRUD (Create, Read, Update, Delete) application using SQLite and C++. 
-               It emphasizes key programming concepts such as database interaction, error handling and input validation. 
-               The application features an easy-to-use console interface with enhanced styling, allowing users to manage data seamlessly. 
-               Highlights of the project include ID validation for secure updates and deletions, dynamic SQL query building 
-               queries, and automated table creation to ensure database integrity. This project reflects my ability to develop robust, efficient and scalable solutions, while respecting best practices in software development.</p>
-               <a href="https://github.com/Fgarita/CRUD_SQLite_With_C-_Using_sqlite.git" target="_blank" class="py">view project</a>
+            <p>A complete CRUD (Create, Read, Update, Delete) application built in C++ with SQLite, covering the full data lifecycle: dynamic SQL query building, automated 
+              table creation, and ID-based validation to block invalid updates or deletions before they reach the database. Wrapped in a styled, easy-to-use console interface. 
+              This project reflects my ability to develop robust, efficient and scalable solutions while respecting best practices in software development.</p>
+              <a href="https://github.com/Fgarita/CRUD_SQLite_With_C-_Using_sqlite.git" target="_blank" class="py">view project</a>
           </div>
           <div class="project-img">
             <div class="tech-review">
@@ -335,9 +346,10 @@
           <div class="project-info">
             <h1>Password Manager</h1>
             <h2>Personal Project</h2>
-            <p>Password Manager is a desktop application developed in Python to securely manage passwords. It provides functions for adding, viewing, updating and deleting passwords, 
-              storing them in an AES encrypted database and protecting the key using environment variables. It has a modern graphical interface designed with Tkinter, and is packaged 
-              as a standalone application ready for distribution.</p>
+            <p>A desktop password manager built in Python. Stores every credential in an AES-encrypted local database, keeps the encryption key out of the codebase using 
+              environment variables, and covers the full CRUD lifecycle (add, view, update, delete) through a modern Tkinter GUI. Packaged as a standalone executable with 
+              PyInstaller, so it runs on Windows without requiring Python to be installed — the kind of security-first design informed by my Ethical Hacking and Cybersecurity 
+              certifications.</p>
               <a href="https://github.com/Fgarita/Password-Manager.git" target="_blank" class="py">view project</a>
           </div>
           <div class="project-img">
@@ -359,9 +371,10 @@
           <div class="project-info">
             <h1>Contact Company Jobs</h1>
             <h2>Personal Project</h2>
-            <p>is a web application that allows users to access a list of companies along with their emails and location. The information is automatically retrieved from a Google Sheets document in CSV format and displayed in an interactive table.
-               The portal facilitates searching, filtering and exporting data in CSV, Excel, PDF and clipboard copy, allowing users to manage information efficiently. Bootstrap 5 was used for a responsive design and DataTables.js was used to enhance the browsing experience with functionalities such as pagination, sorting and advanced search.
-              This project highlights skills in API integration, dynamic data manipulation with JavaScript, and the creation of intuitive interfaces for querying business information.</p>
+            <p>A web application that lets users browse a live-updating list of companies with their emails and location, pulled automatically from a Google Sheets document in 
+              CSV format and rendered in an interactive table. Supports export to 4 formats (CSV, Excel, PDF, clipboard), plus real-time search, sorting and pagination across 
+              the full dataset — no manual re-uploading needed when the source sheet changes. Built with Bootstrap 5 for a responsive layout and DataTables.js for the browsing 
+              experience. This project highlights skills in API integration, dynamic data manipulation with JavaScript, and the creation of intuitive interfaces for querying business information.</p>
               <a href="https://fgarita.github.io/JobShearch/" target="_blank" class="py">view project</a>
           </div>
           <div class="project-img">
