@@ -86,11 +86,14 @@ p {
   margin-top: 30px;
   transition: 0.3s ease;
   transition-property: background-color, color;
+  animation: pulse-glow-green 2.5s infinite;
 }
 
 .cta1:hover {
   color: white;
   background-color: rgb(0, 134, 0);
+  animation-play-state: paused;
+  box-shadow: none;
 }
 
 .cta2 {
@@ -107,11 +110,15 @@ p {
   margin-top: 30px;
   transition: 0.3s ease;
   transition-property: background-color, color;
+  animation: pulse-glow-blue 2.5s infinite;
+  animation-delay: 0.3s;
 }
 
 .cta2:hover {
   color: white;
   background-color: rgb(0, 74, 134);
+  animation-play-state: paused;
+  box-shadow: none;
 }
 
 .cta3 {
@@ -128,11 +135,51 @@ p {
   margin-top: 30px;
   transition: 0.3s ease;
   transition-property: background-color, color;
+  animation: pulse-glow-gray 2.5s infinite;
+  animation-delay: 0.6s;
 }
 
 .cta3:hover {
   color: white;
   background-color: rgb(108, 117, 125);
+  animation-play-state: paused;
+  box-shadow: none;
+}
+
+@keyframes pulse-glow-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 134, 0, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(0, 134, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 134, 0, 0);
+  }
+}
+
+@keyframes pulse-glow-blue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 74, 134, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(0, 74, 134, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 74, 134, 0);
+  }
+}
+
+@keyframes pulse-glow-gray {
+  0% {
+    box-shadow: 0 0 0 0 rgba(108, 117, 125, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(108, 117, 125, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(108, 117, 125, 0);
+  }
 }
 
 /* Header section */
@@ -651,7 +698,7 @@ section[id] {
 }
 
 #currently-learning .container {
-  min-height: auto;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -1041,6 +1088,12 @@ section[id] {
 /* End skills Section */
 
 /* Experience Section */
+
+#experience .container {
+  align-items: flex-start;
+  padding-top: 130px;
+  padding-bottom: 60px;
+}
 
 #experience .experience-top {
   max-width: 800px;
