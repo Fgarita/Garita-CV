@@ -516,16 +516,22 @@
 
 <!-- Chatbot -->
 <div id="chatbot-container">
-  <div id="chatbot-icon">🤖</div>
+  <div id="chatbot-icon"><i class="fa-solid fa-comment-dots"></i></div>
   <div id="chatbot-box">
     <div id="chatbot-header">
-      <span>Chatbot</span>
-      <button id="close-chat">✖</button>
+      <div class="chatbot-header-info">
+        <div class="chatbot-avatar"><i class="fa-solid fa-robot"></i></div>
+        <div>
+          <span class="chatbot-title">José's Assistant</span>
+          <span class="chatbot-status"><i class="chatbot-status-dot"></i>Online</span>
+        </div>
+      </div>
+      <button id="close-chat" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div id="chatbot-messages"></div>
     <div id="chatbot-input-area">
       <input type="text" id="chatbot-input" placeholder="Type a message..." />
-      <button id="chatbot-send">Send</button>
+      <button id="chatbot-send" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
     </div>
   </div>
 </div>
