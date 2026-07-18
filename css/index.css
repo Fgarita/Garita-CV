@@ -510,6 +510,27 @@ div#Message {
   .right-buttons a i {
     display: inline;
   }
+
+  #cover h1 {
+    font-size: 2.1rem;
+  }
+
+  #cover .cover {
+    padding: 0 20px;
+  }
+
+  div#Message {
+    position: absolute;
+    bottom: 20%;
+    left: 20px;
+    right: 20px;
+    margin-bottom: 0;
+  }
+
+  a#cta {
+    margin-left: 0;
+    font-size: 1.1rem;
+  }
 }
 
 /* Asegura que la sección tenga posición relativa para el posicionamiento absoluto de los botones */
@@ -528,7 +549,7 @@ div#Message {
   text-align: center;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding: 110px 20px 80px;
 }
 
 #about .col-left {
@@ -557,10 +578,13 @@ div#Message {
   margin-bottom: 50px;
   padding: 10px 20px;
   font-size: 2rem;
+  animation: pulse-glow-blue 2.5s infinite;
 }
 
 #about .col-right .cta:hover {
   color: white;
+  animation-play-state: paused;
+  box-shadow: none;
 }
 
 #about .col-left .about-img {
@@ -586,6 +610,11 @@ div#Message {
 
 /* profile Section */
 
+#profile .container {
+  align-items: flex-start;
+  padding-top: 110px;
+}
+
 #profile .profile-top {
   max-width: 500px;
   margin: 0 auto;
@@ -593,13 +622,18 @@ div#Message {
 }
 
 #profile .profile-top p {
-  margin-top: 80px;
+  margin-top: 20px;
   color: black;
   text-align: justify;
 }
 /* End profile Section */
 
 /* objectives Section */
+
+#objectives .container {
+  align-items: flex-start;
+  padding-top: 110px;
+}
 
 #objectives .objectives-top {
   max-width: 500px;
@@ -608,13 +642,18 @@ div#Message {
 }
 
 #objectives .objectives-top p {
-  margin-top: 80px;
+  margin-top: 20px;
   color: black;
   text-align: justify;
 }
 /* End objectives Section */
 
 /* education Section */
+
+#education .container {
+  align-items: flex-start;
+  padding-top: 110px;
+}
 
 #education .education-top {
   max-width: 500px;
@@ -627,15 +666,37 @@ div#Message {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #education .education-item {
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  gap: 12px;
   padding: 30px;
   margin: 10px 5%;
   position: relative;
+}
+
+#education .education-item .icon {
+  width: 100%;
+  max-width: 160px;
+}
+
+#education .education-item .icon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#education .education-item .icon:last-child {
+  max-width: 280px;
+  margin-top: 10px;
+  border: 6px solid #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 /* End education Section */
@@ -648,8 +709,7 @@ div#Message {
   text-align: center;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 100px 0;
-  margin-top: 10%;
+  padding: 110px 0 80px;
 }
 
 #certificates .certificates-top {
@@ -663,7 +723,7 @@ div#Message {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 #certificates .certificates-item {
@@ -702,7 +762,8 @@ section[id] {
   min-height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 110px;
 }
 
 #currently-learning .learning-item {
@@ -849,7 +910,7 @@ section[id] {
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 110px 0 80px;
 }
 
 #projects .projects-header h1 {
@@ -1001,8 +1062,7 @@ section[id] {
   text-align: center;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 100px 0;
-  margin-top: 10%;
+  padding: 110px 0 80px;
 }
 
 #skills .skills-top {
@@ -1016,7 +1076,7 @@ section[id] {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 #skills .skills-item {
@@ -1092,8 +1152,8 @@ section[id] {
 
 #experience .container {
   align-items: flex-start;
-  padding-top: 130px;
-  padding-bottom: 60px;
+  padding-top: 110px;
+  padding-bottom: 80px;
 }
 
 #experience .experience-top {
@@ -1169,6 +1229,7 @@ section[id] {
   flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
+  padding-top: 110px;
 }
 
 #contact .contact-title {
@@ -1550,9 +1611,9 @@ section[id] {
   /* contact  */
   #contact .contact {
     flex-direction: column;
-    padding: 100px 0;
+    padding-top: 110px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-width: 20vh;
   }
 
