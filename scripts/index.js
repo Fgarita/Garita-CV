@@ -59,64 +59,113 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Lista de habilidades
+// Lista de habilidades: nombre, categoría y nivel (para el nuevo diseño con chips)
 const skills = [
-  "Scrum/Agile",
-  "Git/GitHub (Intermediate)",
-  "ASP.NET Core (Intermediate)",
-  "XHTML (Intermediate)",
-  "REST APIs (Intermediate)",
-  ".NET Framework (Intermediate)",
-  "ASP.NET MVC (Intermediate)",
-  "Systems auditing (basic)",
-  "Oracle Database (basic)",
-  "ASP.NET Web API (Intermediate)",
-  "LINQ (Intermediate)",
-  "SQL Server Management Studio",
-  "Web Design (Intermediate)",
-  "Sqlserver (Intermediate)",
-  "Data Structure (Intermediate)",
-  "Requirements analysis (Intermediate)",
-  "Mysql (Intermediate)",
-  "Electronics",
-  "CCNA2",
-  "Data Warehouse (basic)",
-  "Java Web Services (basic)",
-  "Attention to Details",
-  "Teamwork",
-  "Troubleshooting",
-  "Communication",
-  "Microsoft Visual Studio Code",
-  "Microsoft Visual Studio",
-  "Power BI (basic)",
-  "Operating systems: Windows, Linux",
-  "Java (basic)",
-  "HTML/CSS (intermediate)",
-  "JavaScript (basic)",
-  "SQL(intermediate)",
-  "C# (intermediate)",
-  "Kotlin (basic)",
-  "PHP (basic)",
-  "Java (basic)",
-  "Ethical Hacker (Intermediate)",
-  "Data Science (basic)",
-  "Cybersecurity (basic)",
-  "Networking (Intermediate)",
+  {name: "C#", level: "intermediate", category: "backend"},
+  {name: "ASP.NET Core", level: "intermediate", category: "backend"},
+  {name: "ASP.NET MVC", level: "intermediate", category: "backend"},
+  {name: ".NET Framework", level: "intermediate", category: "backend"},
+  {name: "ASP.NET Web API", level: "intermediate", category: "backend"},
+  {name: "REST APIs", level: "intermediate", category: "backend"},
+  {name: "LINQ", level: "intermediate", category: "backend"},
+  {name: "Java", level: "basic", category: "backend"},
+  {name: "Java Web Services", level: "basic", category: "backend"},
+  {name: "PHP", level: "basic", category: "backend"},
+  {name: "Kotlin", level: "basic", category: "backend"},
+  {name: "Data Structures", level: "intermediate", category: "backend"},
+
+  {name: "SQL", level: "intermediate", category: "db"},
+  {name: "SQL Server", level: "intermediate", category: "db"},
+  {name: "SQL Server Management Studio", level: "intermediate", category: "db"},
+  {name: "MySQL", level: "intermediate", category: "db"},
+  {name: "Oracle Database", level: "basic", category: "db"},
+
+  {name: "HTML/CSS", level: "intermediate", category: "frontend"},
+  {name: "JavaScript", level: "basic", category: "frontend"},
+  {name: "XHTML", level: "intermediate", category: "frontend"},
+  {name: "Web Design", level: "intermediate", category: "frontend"},
+
+  {name: "Networking", level: "intermediate", category: "network"},
+  {name: "CCNA2", level: "intermediate", category: "network"},
+  {name: "Cybersecurity", level: "basic", category: "network"},
+  {name: "Ethical Hacker", level: "intermediate", category: "network"},
+  {name: "Systems Auditing", level: "basic", category: "network"},
+
+  {name: "Power BI", level: "basic", category: "data"},
+  {name: "Data Science", level: "basic", category: "data"},
+  {name: "Data Warehouse", level: "basic", category: "data"},
+  {name: "Requirements Analysis", level: "intermediate", category: "data"},
+
+  {name: "Git/GitHub", level: "intermediate", category: "tools"},
+  {name: "Scrum/Agile", level: "intermediate", category: "tools"},
+  {name: "Visual Studio", level: "intermediate", category: "tools"},
+  {name: "Visual Studio Code", level: "intermediate", category: "tools"},
+  {name: "Windows & Linux", level: "intermediate", category: "tools"},
+  {name: "Electronics", level: "intermediate", category: "tools"},
+
+  {name: "Attention to Detail", level: null, category: "soft"},
+  {name: "Teamwork", level: null, category: "soft"},
+  {name: "Troubleshooting", level: null, category: "soft"},
+  {name: "Communication", level: null, category: "soft"},
 ];
 
-// Función para agregar las habilidades al HTML
+// Categorías: clave interna -> etiquetas en inglés/español
+const categories = [
+  {key: "backend", en: "Backend & Frameworks", es: "Backend y Frameworks"},
+  {key: "db", en: "Databases", es: "Bases de Datos"},
+  {key: "frontend", en: "Frontend & Web", es: "Frontend y Web"},
+  {key: "network", en: "Networking & Security", es: "Redes y Seguridad"},
+  {key: "data", en: "Data & Analytics", es: "Datos y Analítica"},
+  {key: "tools", en: "Tools & Practices", es: "Herramientas y Prácticas"},
+  {key: "soft", en: "Soft Skills", es: "Habilidades Blandas"},
+];
+
+const levelLabels = {
+  intermediate: {en: "Intermediate", es: "Intermedio"},
+  basic: {en: "Basic", es: "Básico"},
+};
+
+// Función para agregar las habilidades al HTML, agrupadas por categoría
 function displaySkills() {
   const skillsListContainer = document.getElementById("skills-list");
+  if (!skillsListContainer) return;
 
-  // Limpiar el contenedor antes de agregar nuevas habilidades
+  const isSpanish = document.documentElement.lang === "es";
   skillsListContainer.innerHTML = "";
 
-  // Recorrer la lista de habilidades y agregar cada una al contenedor
-  skills.forEach((skill) => {
-    const skillItem = document.createElement("div");
-    skillItem.classList.add("skills-item");
-    skillItem.innerHTML = `<h2>${skill}</h2>`;
-    skillsListContainer.appendChild(skillItem);
+  categories.forEach((cat) => {
+    const items = skills.filter((s) => s.category === cat.key);
+    if (items.length === 0) return;
+
+    const group = document.createElement("div");
+    group.classList.add("skills-category");
+
+    const title = document.createElement("h3");
+    title.textContent = isSpanish ? cat.es : cat.en;
+    group.appendChild(title);
+
+    const chipsWrap = document.createElement("div");
+    chipsWrap.classList.add("skills-chips");
+
+    items.forEach((skill) => {
+      const chip = document.createElement("span");
+      chip.classList.add("skill-chip");
+      if (skill.level) chip.classList.add(`level-${skill.level}`);
+
+      if (skill.level) {
+        const dot = document.createElement("i");
+        dot.classList.add("skill-dot");
+        const levelText = levelLabels[skill.level][isSpanish ? "es" : "en"];
+        dot.title = levelText;
+        chip.appendChild(dot);
+      }
+
+      chip.appendChild(document.createTextNode(skill.name));
+      chipsWrap.appendChild(chip);
+    });
+
+    group.appendChild(chipsWrap);
+    skillsListContainer.appendChild(group);
   });
 }
 
