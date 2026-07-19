@@ -59,68 +59,68 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-  // Lista de habilidades
-  const skills = [
-    'Scrum/Agile',
-    'Git/GitHub (Intermediate)',
-    'ASP.NET Core (Intermediate)',
-    'XHTML (Intermediate)',
-    'REST APIs (Intermediate)',
-    '.NET Framework (Intermediate)',
-    'ASP.NET MVC (Intermediate)',
-    'Systems auditing (basic)',
-    'Oracle Database (basic)',
-    'ASP.NET Web API (Intermediate)',
-    'LINQ (Intermediate)',
-    'SQL Server Management Studio',
-    'Web Design (Intermediate)',
-    'Sqlserver (Intermediate)',
-    'Data Structure (Intermediate)',
-    'Requirements analysis (Intermediate)',
-    'Mysql (Intermediate)',
-    'Electronics',
-    'CCNA2',
-    'Data Warehouse (basic)',
-    'Java Web Services (basic)',
-    'Attention to Details',
-    'Teamwork',
-    'Troubleshooting',
-    'Communication',
-    'Microsoft Visual Studio Code',
-    'Microsoft Visual Studio',
-    'Power BI (basic)',
-    'Operating systems: Windows, Linux',
-    'Java (basic)',
-    'HTML/CSS (intermediate)',
-    'JavaScript (basic)',
-    'SQL(intermediate)',
-    'C# (intermediate)',
-    'Kotlin (basic)',
-    'PHP (basic)',
-    'Java (basic)',
-    'Ethical Hacker (Intermediate)',
-    'Data Science (basic)',
-    'Cybersecurity (basic)',
-    'Networking (Intermediate)',
-  ];
+// Lista de habilidades
+const skills = [
+  "Scrum/Agile",
+  "Git/GitHub (Intermediate)",
+  "ASP.NET Core (Intermediate)",
+  "XHTML (Intermediate)",
+  "REST APIs (Intermediate)",
+  ".NET Framework (Intermediate)",
+  "ASP.NET MVC (Intermediate)",
+  "Systems auditing (basic)",
+  "Oracle Database (basic)",
+  "ASP.NET Web API (Intermediate)",
+  "LINQ (Intermediate)",
+  "SQL Server Management Studio",
+  "Web Design (Intermediate)",
+  "Sqlserver (Intermediate)",
+  "Data Structure (Intermediate)",
+  "Requirements analysis (Intermediate)",
+  "Mysql (Intermediate)",
+  "Electronics",
+  "CCNA2",
+  "Data Warehouse (basic)",
+  "Java Web Services (basic)",
+  "Attention to Details",
+  "Teamwork",
+  "Troubleshooting",
+  "Communication",
+  "Microsoft Visual Studio Code",
+  "Microsoft Visual Studio",
+  "Power BI (basic)",
+  "Operating systems: Windows, Linux",
+  "Java (basic)",
+  "HTML/CSS (intermediate)",
+  "JavaScript (basic)",
+  "SQL(intermediate)",
+  "C# (intermediate)",
+  "Kotlin (basic)",
+  "PHP (basic)",
+  "Java (basic)",
+  "Ethical Hacker (Intermediate)",
+  "Data Science (basic)",
+  "Cybersecurity (basic)",
+  "Networking (Intermediate)",
+];
 
-  // Función para agregar las habilidades al HTML
-  function displaySkills() {
-    const skillsListContainer = document.getElementById('skills-list');
-    
-    // Limpiar el contenedor antes de agregar nuevas habilidades
-    skillsListContainer.innerHTML = '';
+// Función para agregar las habilidades al HTML
+function displaySkills() {
+  const skillsListContainer = document.getElementById("skills-list");
 
-    // Recorrer la lista de habilidades y agregar cada una al contenedor
-    skills.forEach(skill => {
-      const skillItem = document.createElement('div');
-      skillItem.classList.add('skills-item');
-      skillItem.innerHTML = `<h2>${skill}</h2>`;
-      skillsListContainer.appendChild(skillItem);
-    });
-  }
+  // Limpiar el contenedor antes de agregar nuevas habilidades
+  skillsListContainer.innerHTML = "";
 
-  // Llamar a la función para mostrar las habilidades
+  // Recorrer la lista de habilidades y agregar cada una al contenedor
+  skills.forEach((skill) => {
+    const skillItem = document.createElement("div");
+    skillItem.classList.add("skills-item");
+    skillItem.innerHTML = `<h2>${skill}</h2>`;
+    skillsListContainer.appendChild(skillItem);
+  });
+}
+
+// Llamar a la función para mostrar las habilidades
 displaySkills();
 
 function sendMail(event) {
@@ -136,14 +136,21 @@ function sendMail(event) {
   // Selecciona el elemento <h2> para mostrar los mensajes
   const messageStatus = document.getElementById("message-status");
 
-  // Mantén el mensaje inicial
-  const initialMessage = "Send us a message";
+  // Detecta el idioma de la página para mostrar los mensajes correctos
+  const isSpanish = document.documentElement.lang === "es";
+  const initialMessage = isSpanish ? "Envíame un mensaje" : "Send us a message";
+  const successMessage = isSpanish
+    ? "¡Tu mensaje fue enviado con éxito!"
+    : "Your message has been sent successfully!";
+  const errorMessage = isSpanish
+    ? "No se pudo enviar el mensaje. Por favor intentá de nuevo."
+    : "Failed to send the message. Please try again.";
 
   emailjs
     .send("service_bivy7f6", "template_sk3r8mj", parms)
     .then(function (response) {
       // Cambia el texto y estilo a éxito
-      messageStatus.textContent = "Your message has been sent successfully!";
+      messageStatus.textContent = successMessage;
       messageStatus.className = "status-message success";
 
       // Limpiar el formulario
@@ -157,7 +164,7 @@ function sendMail(event) {
     })
     .catch(function (error) {
       // Cambia el texto y estilo a error
-      messageStatus.textContent = "Failed to send the message. Please try again.";
+      messageStatus.textContent = errorMessage;
       messageStatus.className = "status-message error";
 
       // Restaurar el mensaje inicial después de 5 segundos
@@ -167,4 +174,3 @@ function sendMail(event) {
       }, 5000);
     });
 }
-

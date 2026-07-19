@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fgarita.github.io/Garita-CV/sitemap.xml
