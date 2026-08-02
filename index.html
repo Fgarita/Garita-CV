@@ -17,6 +17,40 @@
   <link rel="alternate" hreflang="en" href="https://fgarita.github.io/Garita-CV/" />
   <link rel="alternate" hreflang="es" href="https://fgarita.github.io/Garita-CV/es/index.html" />
   <link rel="alternate" hreflang="x-default" href="https://fgarita.github.io/Garita-CV/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "José Francisco Garita Sánchez",
+    "url": "https://fgarita.github.io/Garita-CV/",
+    "image": "https://fgarita.github.io/Garita-CV/images/og-image-v2.jpg",
+    "jobTitle": "Computer Systems Engineer",
+    "email": "mailto:frangarita@outlook.com",
+    "telephone": "+50683617399",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Heredia",
+      "addressCountry": "CR"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidad Fidélitas"
+    },
+    "knowsLanguage": ["es", "en"],
+    "sameAs": [
+      "https://www.linkedin.com/in/jose-garita-sanchez/",
+      "https://github.com/Fgarita"
+    ],
+    "knowsAbout": [
+      "C#",
+      "ASP.NET Core",
+      "SQL Server",
+      "Backend Development",
+      "Networking",
+      "Cybersecurity"
+    ]
+  }
+  </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -35,14 +69,12 @@
           <div class="hamburger"><div class="bar"></div></div>
           <ul>
             <li><a href="#cover" data-after="Home">Home</a></li>
-            <li><a href="#about-title" data-after="Service">About</a></li>
-            <li><a href="#profile-title" data-after="Objectives">Profile</a></li>
-            <li><a href="#objectives-title" data-after="Objectives">Objectives</a></li>
-            <li><a href="#education-title" data-after="education">Academic Training</a></li>
-            <li><a href="#certificates-title" data-after="certificates">Certificates</a></li>
+            <li><a href="#about-title" data-after="Service">About Me</a></li>
             <li><a href="#skills-title" data-after="skills">Skills</a></li>
             <li><a href="#projects-title" data-after="Projects">Projects</a></li>
             <li><a href="#experience-title" data-after="Experience">Experience</a></li>
+            <li><a href="#education-title" data-after="education">Academic Training</a></li>
+            <li><a href="#certificates-title" data-after="certificates">Certificates</a></li>
             <li><a href="#currently-learning-title" data-after="learning">Learning</a></li>
             <li><a href="#contact-title" data-after="Contact">Contact</a></li>
             <li class="language-selector">
@@ -85,47 +117,243 @@
         </div>
       </div>
       <div class="col-right">
-        <h1 class="section-title" id="about-title">About <span>me</span></h1>
+        <h2 class="section-title" id="about-title">About <span>me</span></h2>
         <p>Hi there! <br>I'm José Francisco Garita Sánchez, a Systems Engineering graduate from Universidad Fidélitas. I've always been drawn
            to the parts of a system nobody sees — the logic running quietly behind a button, holding everything else together. That's what
            pulled me into backend development: not the interface, but the plumbing that makes it trustworthy.
            <br><br>I like being the person a team can hand a messy, half-defined problem to and trust that it'll come back as something solid.
            I'm patient with complexity, stubborn about edge cases, and genuinely enjoy the moment a system finally clicks into place after
            hours of chasing down why it didn't. That combination of curiosity and follow-through is what I bring to every project I touch.
-           <br><br>You can know a little more about me by scrolling down, <br><br> I hope you enjoy it. :)</p>
+           <br><br>I'm currently looking for backend / .NET development opportunities where I can keep building on that foundation — you'll
+           find my full technical stack in the Skills section below, and my hands-on work in Projects and Experience.</p>
         <a href="./cv/Jose Garita Computer Systems Engineer.pdf" target="_blank" rel="noopener noreferrer" class="cta">Open Resume</a>
       </div>
     </div>
   </section>
-    <section id="profile">
-    <div class="profile container">
-      <div class="profile-top">
-        <h1 class="section-title" id="profile-title">PROFESSIONA<span>L P</span>ROFILE</h1>
-        <p>Systems Engineer with a solid background in software development, database administration and networking. I have developed academic and personal projects using
-         technologies such as C#, JavaScript, SQL Server and Python, applying frameworks such as ASP.NET Core and ASP.NET MVC. I have experience in the implementation of
-         management systems, development of REST APIs and relational database optimization. In addition, I have certifications in cybersecurity, networking and web development,
-         including CCNA and Ethical Hacking. I manage tools such as GitHub, Jira and Power BI, and I have skills in data analysis, software architecture and IT security. Committed
-         to continuous improvement, process automation and learning new technologies.</p>
+  <section id="skills">
+    <div class="skills container">
+      <div class="skills-top">
+        <h2 class="section-title" id="skills-title">sk<span>i</span>lls</h2>
+        <p>The skills I have developed I owe to the projects I developed in college and personal projects, but above all I like to learn new technologies and innovate with them.</p>
+        <div class="skills-legend">
+          <span><i class="skill-dot level-intermediate-dot"></i>Intermediate</span>
+          <span><i class="skill-dot level-basic-dot"></i> Basic</span>
+        </div>
+      </div>
+      <div class="skills-bottom" id="skills-list"></div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h2 class="section-title" id="projects-title">Recent <span>Projects</span></h2>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h3>Personal resume</h3>
+            <h2>CV</h2>
+            <p>This is my personal landing page, built for professional presentation and as an interactive resume.</p>
+            <a href="https://github.com/Fgarita/Garita-CV.git" target="_blank" rel="noopener noreferrer" class="py">view project</a>
+          </div>
+          <div class="project-img">
+            <div class="tech-review">
+              <h2>Tools</h2>
+              <ul>
+                <li>html</li>
+                <li>css</li>
+                <li>javascript</li>
+                <li>github pages</li>
+              </ul>
+            </div>
+            <img src="./images/Captura.PNG"/>
+          </div>
+        </div>
+                <div class="project-item">
+          <div class="project-info">
+            <h3>Final Degree Project</h3>
+            <h2>Web sigma project</h2>
+            <p>Built as the capstone project for my Systems Engineering degree, in collaboration with a small team and a real client. The system covers four core business 
+              functions in a single platform: customer appointment scheduling, employee appointment management, inventory control, and financial tracking for the car wash 
+              business — replacing what was previously handled manually with one web-based tool. I was responsible for the backend logic in C# and ASP.NET MVC, connected to a 
+              SQL Server database designed to support all four modules.</p>
+               <a href="https://github.com/Fgarita/Proyecto-Sigma-Web.git" target="_blank" rel="noopener noreferrer" class="py">view project</a>
+          </div>
+          <div class="project-img">
+            <div class="tech-review">
+              <h2>Tools</h2>
+              <ul>
+                <li>html</li>
+                <li>css</li>
+                <li>javascript</li>
+                <li>C#</li>
+                <li>Sqlserver</li>
+                <li>GitHub</li>
+                <li>Visual Studio</li>
+                <li>.NET Framework</li>
+              </ul>
+            </div>
+            <img src="./images/Captura2.PNG"/>
+          </div>
+        </div>
+                        <div class="project-item">
+          <div class="project-info">
+            <h3>Community Service</h3>
+            <h2>Asociación Comedor Infantil Cosechando Sonrisas</h2>
+            <p>150 hours of community work for a non-profit organization that provides food to children in need, as part of my training in Computer Systems Engineering at 
+              Fidélitas University. I designed the foundation for a future Inventory Management System: requirements analysis, a normalized database structure, an interface
+              prototype for tracking incoming and outgoing donations, and full technical documentation to guide the organization's future development team.</p>
+          </div>
+          <div class="project-img">
+            <div class="tech-review">
+              <h2>Tools</h2>
+              <ul>
+                <li>MySql</li>
+                <li>Figma</li>
+                <li>Requirement Analysis</li>
+                <li>SQL workbench</li>
+              </ul>
+            </div>
+            <img src="./images/asocia.jpg"/>
+          </div>
+        </div>
+          <div class="project-item">
+          <div class="project-info">
+            <h3>CRUD in C++</h3>
+            <h2>Personal Project</h2>
+            <p>A complete CRUD (Create, Read, Update, Delete) application built in C++ with SQLite, covering the full data lifecycle: dynamic SQL query building, automated 
+              table creation, and ID-based validation to block invalid updates or deletions before they reach the database. Wrapped in a styled, easy-to-use console interface. 
+              This project reflects my ability to develop robust, efficient and scalable solutions while respecting best practices in software development.</p>
+              <a href="https://github.com/Fgarita/CRUD_SQLite_With_C-_Using_sqlite.git" target="_blank" rel="noopener noreferrer" class="py">view project</a>
+          </div>
+          <div class="project-img">
+            <div class="tech-review">
+              <h2>Tools</h2>
+              <ul>
+                <li>SQLite</li>
+                <li>C++</li>
+                <li>Visual Studio</li>
+              </ul>
+            </div>
+            <img src="./images/salida_consala.PNG"/>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h3>Password Manager</h3>
+            <h2>Personal Project</h2>
+            <p>A desktop password manager built in Python. Stores every credential in an AES-encrypted local database, keeps the encryption key out of the codebase using 
+              environment variables, and covers the full CRUD lifecycle (add, view, update, delete) through a modern Tkinter GUI. Packaged as a standalone executable with 
+              PyInstaller, so it runs on Windows without requiring Python to be installed — the kind of security-first design informed by my Ethical Hacking and Cybersecurity 
+              certifications.</p>
+              <a href="https://github.com/Fgarita/Password-Manager.git" target="_blank" rel="noopener noreferrer" class="py">view project</a>
+          </div>
+          <div class="project-img">
+            <div class="tech-review">
+              <h2>Tools</h2>
+              <ul>
+                <li>Python</li>
+                <li>SQLite</li>
+                <li>Visual Studio Code</li>
+                <li>Tkinter</li>
+                <li>PyInstaller</li>
+                <li> AES (Advanced Encryption Standard)</li>
+              </ul>
+            </div>
+            <img src="./images/password.PNG"/>
+          </div>
+        </div>
+                <div class="project-item">
+          <div class="project-info">
+            <h3>Contact Company Jobs</h3>
+            <h2>Personal Project</h2>
+            <p>A web application that lets users browse a live-updating list of companies with their emails and location, pulled automatically from a Google Sheets document in 
+              CSV format and rendered in an interactive table. Supports export to 4 formats (CSV, Excel, PDF, clipboard), plus real-time search, sorting and pagination across 
+              the full dataset — no manual re-uploading needed when the source sheet changes. Built with Bootstrap 5 for a responsive layout and DataTables.js for the browsing 
+              experience. This project highlights skills in API integration, dynamic data manipulation with JavaScript, and the creation of intuitive interfaces for querying business information.</p>
+              <a href="https://fgarita.github.io/JobShearch/" target="_blank" rel="noopener noreferrer" class="py">view project</a>
+          </div>
+          <div class="project-img">
+            <div class="tech-review">
+              <h2>Tools</h2>
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3 (Bootstrap 5)</li>
+                <li>Visual Studio Code</li>
+                <li>JavaScript (ES6+ y jQuery)</li>
+                <li>DataTables.js</li>
+                <li>Google Sheets API (CSV)</li>
+                <li>Fetch API</li>
+              </ul>
+            </div>
+            <img src="./images/contac.png"/>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section id="objectives">
-    <div class="objectives container">
-      <div class="objectives-top">
-        <h1 class="section-title" id="objectives-title">PROFESSIONA<span>L O</span>BJECTIVES</h1>
-        <p>-Develop experience in the technology industry by applying my knowledge in software development, databases and networking in enterprise environments.<br>
-           -Specialize in backend development and software architecture, using technologies such as C#, ASP.NET Core and SQL Server to create scalable and secure solutions.<br>
-           -Expand my knowledge in cybersecurity and networking, strengthening my skills in Ethical Hacking and CCNA to contribute to the protection of systems and data.<br>
-           -Optimize processes through automation and data analysis, using tools such as Power BI and Python to improve business decision making.<br>
-           -Contribute to the development of innovative technological solutions, participating in projects that have a positive impact on companies and organizations.<br>
-           -Continue with training and certification in key technologies, keeping up to date with the latest trends in software development, cybersecurity and cloud computing.</p>
+  <section id="experience">
+    <div class="experience container">
+      <div class="experience-top">
+        <h2 class="section-title" id="experience-title">EXPE<span>RI</span>ENCE</h2>
+        <div class="accordion">
+          <h2 class="accordion-title-heading">
+            <button type="button" class="accordion-title" aria-expanded="false" aria-controls="exp-vettel-content" id="exp-vettel-header">
+              <div class="accordion-title-text">
+                <span class="role">Backend Developer — Capstone Project</span>
+                <span class="accordion-meta">Vettel Car Wash · 2023</span>
+              </div>
+              <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+            </button>
+          </h2>
+          <div class="accordion-content" id="exp-vettel-content" role="region" aria-labelledby="exp-vettel-header">
+           <div class="accordion-inner">
+            <p>Developed as the culmination of my Computer Systems Engineering degree, working with a small team for a real client:
+               an appointment management system for a car wash business. I owned the backend in C# and the .NET Framework, connected
+               to a SQL Server database, while the team built the customer-facing booking interface in HTML, CSS and JavaScript.</p>
+            <p>Responsibilities and achievements:</p>
+            <ul>
+              <li><strong>User Interface Design:</strong> intuitive booking flow using HTML, CSS and JavaScript.</li>
+              <li><strong>Backend Development:</strong> robust C# / .NET Framework functionality for appointments, inventory, user profiles and financials.</li>
+              <li><strong>Database Management:</strong> SQL Server design focused on data integrity and reliability.</li>
+              <li><strong>Version Control:</strong> GitHub-based collaborative workflow across the team.</li>
+              <li><strong>Development Environment:</strong> Visual Studio for editing, debugging and deployment.</li>
+            </ul>
+           </div>
+          </div>
+        </div>
+        <div class="accordion">
+          <h2 class="accordion-title-heading">
+            <button type="button" class="accordion-title" aria-expanded="false" aria-controls="exp-community-content" id="exp-community-header">
+              <div class="accordion-title-text">
+                <span class="role">Systems Analyst — Community Service</span>
+                <span class="accordion-meta">Asociación Comedor Infantil Cosechando Sonrisas · 2023</span>
+              </div>
+              <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+            </button>
+          </h2>
+          <div class="accordion-content" id="exp-community-content" role="region" aria-labelledby="exp-community-header">
+           <div class="accordion-inner">
+            <p>150 hours of volunteer work fulfilling Fidélitas University's community service requirement, designing the foundation
+               for a future Inventory Management System for a non-profit that provides food to children in need.</p>
+            <p>Responsibilities and achievements:</p>
+            <ul>
+              <li><strong>Requirements Analysis:</strong> identified the organization's inventory tracking needs.</li>
+              <li><strong>Database Design:</strong> efficient structure to optimize inventory management.</li>
+              <li><strong>Interface Design:</strong> intuitive prototype for tracking incoming and outgoing donations.</li>
+              <li><strong>System Prototyping:</strong> a working prototype to guide future development.</li>
+              <li><strong>Documentation:</strong> detailed technical documentation for the organization's future development team.</li>
+            </ul>
+           </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
     <section id="education">
     <div class="education container">
       <div class="education-top">
-        <h1 class="section-title" id="education-title">ACADEMI<span>C T</span>RAINING</h1>
+        <h2 class="section-title" id="education-title">ACADEMI<span>C T</span>RAINING</h2>
          <div class="education-bottom">
         <div class="education-item">
           <div class="icon"><img src="./icons/fidelitas.png"/></div>
@@ -141,7 +369,7 @@
 <section id="certificates">
   <div class="certificates container">
     <div class="certificates-top">
-      <h1 class="section-title" id="certificates-title">CERTI<span>FI</span>CATES</h1>
+      <h2 class="section-title" id="certificates-title">CERTI<span>FI</span>CATES</h2>
       <p>Below are some of the certificates I've earned during my academic and professional journey.</p>
     </div>
     <div class="certificates-bottom">
@@ -233,225 +461,9 @@
 </div>
 </div>
 </section>
-  <section id="skills">
-    <div class="skills container">
-      <div class="skills-top">
-        <h1 class="section-title" id="skills-title">sk<span>i</span>lls</h1>
-        <p>The skills I have developed I owe to the projects I developed in college and personal projects, but above all I like to learn new technologies and innovate with them.</p>
-        <div class="skills-legend">
-          <span><i class="skill-dot level-intermediate-dot"></i>Intermediate</span>
-          <span><i class="skill-dot level-basic-dot"></i> Basic</span>
-        </div>
-      </div>
-      <div class="skills-bottom" id="skills-list"></div>
-    </div>
-  </section>
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title" id="projects-title">Recent <span>Projects</span></h1>
-      </div>
-      <div class="all-projects">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Personal resume</h1>
-            <h2>CV</h2>
-            <p>This is my personal landing page, built for professional presentation and as an interactive resume.</p>
-            <a href="https://github.com/Fgarita/Garita-CV.git" target="_blank" rel="noopener noreferrer" class="py">view project</a>
-          </div>
-          <div class="project-img">
-            <div class="tech-review">
-              <h2>Tools</h2>
-              <ul>
-                <li>html</li>
-                <li>css</li>
-                <li>javascript</li>
-                <li>github pages</li>
-              </ul>
-            </div>
-            <img src="./images/Captura.PNG"/>
-          </div>
-        </div>
-                <div class="project-item">
-          <div class="project-info">
-            <h1>Final Degree Project</h1>
-            <h2>Web sigma project</h2>
-            <p>Built as the capstone project for my Systems Engineering degree, in collaboration with a small team and a real client. The system covers four core business 
-              functions in a single platform: customer appointment scheduling, employee appointment management, inventory control, and financial tracking for the car wash 
-              business — replacing what was previously handled manually with one web-based tool. I was responsible for the backend logic in C# and ASP.NET MVC, connected to a 
-              SQL Server database designed to support all four modules.</p>
-               <a href="https://github.com/Fgarita/Proyecto-Sigma-Web.git" target="_blank" rel="noopener noreferrer" class="py">view project</a>
-          </div>
-          <div class="project-img">
-            <div class="tech-review">
-              <h2>Tools</h2>
-              <ul>
-                <li>html</li>
-                <li>css</li>
-                <li>javascript</li>
-                <li>C#</li>
-                <li>Sqlserver</li>
-                <li>GitHub</li>
-                <li>Visual Studio</li>
-                <li>.NET Framework</li>
-              </ul>
-            </div>
-            <img src="./images/Captura2.PNG"/>
-          </div>
-        </div>
-                        <div class="project-item">
-          <div class="project-info">
-            <h1>Community Service</h1>
-            <h2>Asociación Comedor Infantil Cosechando Sonrisas</h2>
-            <p>150 hours of community work for a non-profit organization that provides food to children in need, as part of my training in Computer Systems Engineering at 
-              Fidélitas University. I designed the foundation for a future Inventory Management System: requirements analysis, a normalized database structure, an interface
-              prototype for tracking incoming and outgoing donations, and full technical documentation to guide the organization's future development team.</p>
-          </div>
-          <div class="project-img">
-            <div class="tech-review">
-              <h2>Tools</h2>
-              <ul>
-                <li>MySql</li>
-                <li>Figma</li>
-                <li>Requirement Analysis</li>
-                <li>SQL workbench</li>
-              </ul>
-            </div>
-            <img src="./images/asocia.jpg"/>
-          </div>
-        </div>
-          <div class="project-item">
-          <div class="project-info">
-            <h1>CRUD in C++</h1>
-            <h2>Personal Project</h2>
-            <p>A complete CRUD (Create, Read, Update, Delete) application built in C++ with SQLite, covering the full data lifecycle: dynamic SQL query building, automated 
-              table creation, and ID-based validation to block invalid updates or deletions before they reach the database. Wrapped in a styled, easy-to-use console interface. 
-              This project reflects my ability to develop robust, efficient and scalable solutions while respecting best practices in software development.</p>
-              <a href="https://github.com/Fgarita/CRUD_SQLite_With_C-_Using_sqlite.git" target="_blank" rel="noopener noreferrer" class="py">view project</a>
-          </div>
-          <div class="project-img">
-            <div class="tech-review">
-              <h2>Tools</h2>
-              <ul>
-                <li>SQLite</li>
-                <li>C++</li>
-                <li>Visual Studio</li>
-              </ul>
-            </div>
-            <img src="./images/salida_consala.PNG"/>
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Password Manager</h1>
-            <h2>Personal Project</h2>
-            <p>A desktop password manager built in Python. Stores every credential in an AES-encrypted local database, keeps the encryption key out of the codebase using 
-              environment variables, and covers the full CRUD lifecycle (add, view, update, delete) through a modern Tkinter GUI. Packaged as a standalone executable with 
-              PyInstaller, so it runs on Windows without requiring Python to be installed — the kind of security-first design informed by my Ethical Hacking and Cybersecurity 
-              certifications.</p>
-              <a href="https://github.com/Fgarita/Password-Manager.git" target="_blank" rel="noopener noreferrer" class="py">view project</a>
-          </div>
-          <div class="project-img">
-            <div class="tech-review">
-              <h2>Tools</h2>
-              <ul>
-                <li>Python</li>
-                <li>SQLite</li>
-                <li>Visual Studio Code</li>
-                <li>Tkinter</li>
-                <li>PyInstaller</li>
-                <li> AES (Advanced Encryption Standard)</li>
-              </ul>
-            </div>
-            <img src="./images/password.PNG"/>
-          </div>
-        </div>
-                <div class="project-item">
-          <div class="project-info">
-            <h1>Contact Company Jobs</h1>
-            <h2>Personal Project</h2>
-            <p>A web application that lets users browse a live-updating list of companies with their emails and location, pulled automatically from a Google Sheets document in 
-              CSV format and rendered in an interactive table. Supports export to 4 formats (CSV, Excel, PDF, clipboard), plus real-time search, sorting and pagination across 
-              the full dataset — no manual re-uploading needed when the source sheet changes. Built with Bootstrap 5 for a responsive layout and DataTables.js for the browsing 
-              experience. This project highlights skills in API integration, dynamic data manipulation with JavaScript, and the creation of intuitive interfaces for querying business information.</p>
-              <a href="https://fgarita.github.io/JobShearch/" target="_blank" rel="noopener noreferrer" class="py">view project</a>
-          </div>
-          <div class="project-img">
-            <div class="tech-review">
-              <h2>Tools</h2>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3 (Bootstrap 5)</li>
-                <li>Visual Studio Code</li>
-                <li>JavaScript (ES6+ y jQuery)</li>
-                <li>DataTables.js</li>
-                <li>Google Sheets API (CSV)</li>
-                <li>Fetch API</li>
-              </ul>
-            </div>
-            <img src="./images/contac.png"/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="experience">
-    <div class="experience container">
-      <div class="experience-top">
-        <h1 class="section-title" id="experience-title">EXPE<span>RI</span>ENCE</h1>
-        <div class="accordion">
-          <h2 class="accordion-title">
-            <div class="accordion-title-text">
-              <span class="role">Backend Developer — Capstone Project</span>
-              <span class="accordion-meta">Vettel Car Wash · 2023</span>
-            </div>
-            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
-          </h2>
-          <div class="accordion-content">
-           <div class="accordion-inner">
-            <p>Developed as the culmination of my Computer Systems Engineering degree, working with a small team for a real client:
-               an appointment management system for a car wash business. I owned the backend in C# and the .NET Framework, connected
-               to a SQL Server database, while the team built the customer-facing booking interface in HTML, CSS and JavaScript.</p>
-            <p>Responsibilities and achievements:</p>
-            <ul>
-              <li><strong>User Interface Design:</strong> intuitive booking flow using HTML, CSS and JavaScript.</li>
-              <li><strong>Backend Development:</strong> robust C# / .NET Framework functionality for appointments, inventory, user profiles and financials.</li>
-              <li><strong>Database Management:</strong> SQL Server design focused on data integrity and reliability.</li>
-              <li><strong>Version Control:</strong> GitHub-based collaborative workflow across the team.</li>
-              <li><strong>Development Environment:</strong> Visual Studio for editing, debugging and deployment.</li>
-            </ul>
-           </div>
-          </div>
-        </div>
-        <div class="accordion">
-          <h2 class="accordion-title">
-            <div class="accordion-title-text">
-              <span class="role">Systems Analyst — Community Service</span>
-              <span class="accordion-meta">Asociación Comedor Infantil Cosechando Sonrisas · 2023</span>
-            </div>
-            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
-          </h2>
-          <div class="accordion-content">
-           <div class="accordion-inner">
-            <p>150 hours of volunteer work fulfilling Fidélitas University's community service requirement, designing the foundation
-               for a future Inventory Management System for a non-profit that provides food to children in need.</p>
-            <p>Responsibilities and achievements:</p>
-            <ul>
-              <li><strong>Requirements Analysis:</strong> identified the organization's inventory tracking needs.</li>
-              <li><strong>Database Design:</strong> efficient structure to optimize inventory management.</li>
-              <li><strong>Interface Design:</strong> intuitive prototype for tracking incoming and outgoing donations.</li>
-              <li><strong>System Prototyping:</strong> a working prototype to guide future development.</li>
-              <li><strong>Documentation:</strong> detailed technical documentation for the organization's future development team.</li>
-            </ul>
-           </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 <section id="currently-learning">
   <div class="currently-learning container">
-    <h1 class="section-title" id="currently-learning-title">LEAR<span>NING</span></h1>
+    <h2 class="section-title" id="currently-learning-title">LEAR<span>NING</span></h2>
     <div class="learning-item">
       <span class="learning-dot"></span>
       <p><strong>Advanced English</strong> — Universidad Fidélitas, working toward stronger fluency for technical communication in international teams.</p>
@@ -461,27 +473,27 @@
 <section id="contact">
   <div class="contact container">
     <div class="contact-title">
-      <h1 class="section-title" id="contact-title">Contact <span>Info</span></h1>
+      <h2 class="section-title" id="contact-title">Contact <span>Info</span></h2>
     </div>
     <div class="contact-items">
       <div class="contact-item">
         <div class="icon"><img src="./icons/phone.png" alt="Phone Icon" /></div>
         <div class="contact-info">
-          <h1>Phone</h1>
+          <h3>Phone</h3>
           <h2>+506 83617399</h2>
         </div>
       </div>
       <div class="contact-item">
         <div class="icon"><img src="./icons/email.png" alt="Email Icon" /></div>
         <div class="contact-info">
-          <h1>Email</h1>
+          <h3>Email</h3>
           <h2><a href="mailto:frangarita@outlook.com" style="text-decoration:none">frangarita@outlook.com</a></h2>
         </div>
       </div>
       <div class="contact-item">
         <div class="icon"><img src="./icons/address.png" alt="Address Icon" /></div>
         <div class="contact-info">
-          <h1>Address</h1>
+          <h3>Address</h3>
           <h2>Heredia, Costa Rica</h2>
         </div>
       </div>
@@ -513,6 +525,14 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
   <section id="footer">
     <div class="footer container">
       <div class="social-icon">

@@ -239,6 +239,11 @@ p {
   text-transform: uppercase;
   padding: 10px;
   display: block;
+  transition: color 0.25s ease;
+}
+
+#header .nav-list ul li a.active-link {
+  color: rgb(120, 190, 255);
 }
 
 #header .nav-list ul a::after {
@@ -561,7 +566,7 @@ div#Message {
   width: 100%;
 }
 
-#about .col-right h2 {
+#about .col-right h2:not(.section-title) {
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
@@ -913,7 +918,7 @@ section[id] {
   padding: 110px 0 80px;
 }
 
-#projects .projects-header h1 {
+#projects .projects-header h2 {
   margin-bottom: 50px;
 }
 
@@ -948,7 +953,7 @@ section[id] {
   text-align: justify;
 }
 
-#projects .project-info h1 {
+#projects .project-info h3 {
   font-size: 4rem;
   font-weight: 500;
 }
@@ -1270,6 +1275,10 @@ section[id] {
   overflow: hidden;
 }
 
+.accordion-title-heading {
+  margin: 0;
+}
+
 .accordion-title {
   cursor: pointer;
   padding: 12px 14px;
@@ -1286,6 +1295,17 @@ section[id] {
   justify-content: space-between;
   gap: 10px;
   transition: background-image 0.25s ease;
+  /* Reset de estilos por defecto del <button> */
+  border: none;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+  border-radius: 0;
+}
+
+.accordion-title:focus-visible {
+  outline: 3px solid rgb(120, 190, 255);
+  outline-offset: -3px;
 }
 
 .accordion-title-text {
@@ -1551,7 +1571,7 @@ section[id] {
   margin-bottom: 10px;
 }
 
-#contact .contact-info h1 {
+#contact .contact-info h3 {
   font-size: 2.5rem;
   font-weight: 500;
   margin-bottom: 5px;
@@ -1670,7 +1690,7 @@ section[id] {
     margin: auto;
   }
 
-  h1.section-title {
+  h2.section-title {
     font-size: 6rem;
   }
 
@@ -1730,7 +1750,7 @@ section[id] {
     padding: 30px;
   }
 
-  #about .col-right h1 {
+  #about .col-right h2 {
     text-align: left;
   }
   /* End About */
@@ -1800,6 +1820,17 @@ section[id] {
 
     #header .nav-list ul li a {
       font-size: 1.8rem;
+      position: relative;
+    }
+
+    #header .nav-list ul li a.active-link::before {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 10px;
+      right: 10px;
+      height: 2px;
+      background: rgb(120, 190, 255);
     }
 
     #header .nav-list ul a:after {

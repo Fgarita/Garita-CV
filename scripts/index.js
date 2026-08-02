@@ -28,13 +28,65 @@ menu_item.forEach((item) => {
   });
 });
 
+// --- Indicador de sección activa en el menú ---
+(() => {
+  const observedTargets = [];
+
+  menu_item.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || !href.startsWith("#")) return;
+    const target = document.getElementById(href.slice(1));
+    if (target) observedTargets.push({link, target});
+  });
+
+  if (observedTargets.length === 0) return;
+
+  const setActive = (targetEl) => {
+    observedTargets.forEach(({link, target}) => {
+      link.classList.toggle("active-link", target === targetEl);
+    });
+  };
+
+  let suppressObserverUntil = 0;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (Date.now() < suppressObserverUntil) return; // scroll por clic en curso, no interferir
+      // Elegimos la entrada visible más cercana a la parte superior del viewport
+      const visible = entries.filter((e) => e.isIntersecting);
+      if (visible.length === 0) return;
+      visible.sort(
+        (a, b) => a.boundingClientRect.top - b.boundingClientRect.top
+      );
+      setActive(visible[0].target);
+    },
+    {
+      root: null,
+      rootMargin: "-90px 0px -60% 0px",
+      threshold: 0,
+    }
+  );
+
+  observedTargets.forEach(({target}) => observer.observe(target));
+
+  // Al hacer clic en un link del menú, marcarlo activo de inmediato
+  // (no depender solo del observer, que puede tardar en "asentarse" durante el scroll suave)
+  observedTargets.forEach(({link, target}) => {
+    link.addEventListener("click", () => {
+      setActive(target);
+      suppressObserverUntil = Date.now() + 900; // duración aprox. del scroll suave
+    });
+  });
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   const accordions = document.querySelectorAll(".accordion-title");
   let lastScrollPosition = 0; // Variable para guardar la posición de desplazamiento
 
   accordions.forEach((title) => {
     title.addEventListener("click", () => {
-      const accordion = title.parentElement;
+      const accordion = title.closest(".accordion");
+      if (!accordion) return;
 
       if (!accordion.classList.contains("active")) {
         // Si se está abriendo el acordeón, guarda la posición de desplazamiento actual
@@ -43,16 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Alterna la clase activa del acordeón actual
       accordion.classList.toggle("active");
+      const isActive = accordion.classList.contains("active");
+      title.setAttribute("aria-expanded", String(isActive));
 
-      // Cierra otros acordeones
+      // Cierra otros acordeones (y su aria-expanded / clase active)
       document.querySelectorAll(".accordion").forEach((otherAccordion) => {
         if (otherAccordion !== accordion) {
           otherAccordion.classList.remove("active");
+          const otherTitle = otherAccordion.querySelector(".accordion-title");
+          if (otherTitle) otherTitle.setAttribute("aria-expanded", "false");
         }
       });
 
       // Si el acordeón se cierra, restablece la posición de desplazamiento
-      if (!accordion.classList.contains("active")) {
+      if (!isActive) {
         window.scrollTo(0, lastScrollPosition);
       }
     });

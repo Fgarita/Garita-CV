@@ -17,6 +17,40 @@
   <link rel="alternate" hreflang="en" href="https://fgarita.github.io/Garita-CV/" />
   <link rel="alternate" hreflang="es" href="https://fgarita.github.io/Garita-CV/es/index.html" />
   <link rel="alternate" hreflang="x-default" href="https://fgarita.github.io/Garita-CV/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "José Francisco Garita Sánchez",
+    "url": "https://fgarita.github.io/Garita-CV/es/index.html",
+    "image": "https://fgarita.github.io/Garita-CV/images/og-image-v2.jpg",
+    "jobTitle": "Ingeniero en Sistemas Computacionales",
+    "email": "mailto:frangarita@outlook.com",
+    "telephone": "+50683617399",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Heredia",
+      "addressCountry": "CR"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidad Fidélitas"
+    },
+    "knowsLanguage": ["es", "en"],
+    "sameAs": [
+      "https://www.linkedin.com/in/jose-garita-sanchez/",
+      "https://github.com/Fgarita"
+    ],
+    "knowsAbout": [
+      "C#",
+      "ASP.NET Core",
+      "SQL Server",
+      "Desarrollo Backend",
+      "Redes",
+      "Ciberseguridad"
+    ]
+  }
+  </script>
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -36,13 +70,11 @@
           <ul>
             <li><a href="#cover" data-after="Inicio">Inicio</a></li>
             <li><a href="#about-title" data-after="Sobre mí">Sobre mí</a></li>
-            <li><a href="#profile-title" data-after="Perfil">Perfil</a></li>
-            <li><a href="#objectives-title" data-after="Objetivos">Objetivos</a></li>
-            <li><a href="#education-title" data-after="Educación">Formación Académica</a></li>
-            <li><a href="#certificates-title" data-after="Certificados">Certificados</a></li>
             <li><a href="#skills-title" data-after="Habilidades">Habilidades</a></li>
             <li><a href="#projects-title" data-after="Proyectos">Proyectos</a></li>
             <li><a href="#experience-title" data-after="Experiencia">Experiencia</a></li>
+            <li><a href="#education-title" data-after="Educación">Formación Académica</a></li>
+            <li><a href="#certificates-title" data-after="Certificados">Certificados</a></li>
             <li><a href="#currently-learning-title" data-after="Aprendiendo">Aprendiendo</a></li>
             <li><a href="#contact-title" data-after="Contacto">Contacto</a></li>
             <li class="language-selector">
@@ -85,7 +117,7 @@
         </div>
       </div>
       <div class="col-right">
-        <h1 class="section-title" id="about-title">Sobre <span>mí</span></h1>
+        <h2 class="section-title" id="about-title">Sobre <span>mí</span></h2>
         <p>¡Hola! <br>Soy José Francisco Garita Sánchez, egresado de Ingeniería en Sistemas Computacionales de la Universidad Fidélitas.
            Siempre me atrajeron las partes de un sistema que nadie ve — la lógica que corre en silencio detrás de un botón, sosteniendo
            todo lo demás. Eso fue lo que me llevó al desarrollo backend: no la interfaz, sino la plomería que la hace confiable.
@@ -93,41 +125,244 @@
            de que va a volver convertido en algo sólido. Soy paciente con la complejidad, terco con los casos límite, y disfruto de verdad
            ese momento en que un sistema finalmente encaja después de horas persiguiendo por qué no funcionaba. Esa combinación de
            curiosidad y constancia es lo que aporto a cada proyecto en el que trabajo.
-           <br><br>Puedes conocer un poco más sobre mí desplazándote hacia abajo, <br><br> ¡Espero que lo disfrutes! :)</p>
+           <br><br>Actualmente estoy buscando oportunidades de desarrollo backend / .NET donde pueda seguir construyendo sobre esa base —
+           encontrás mi stack técnico completo en la sección de Habilidades más abajo, y mi trabajo concreto en Proyectos y Experiencia.</p>
         <a href="../cv/jose-garita-resume.pdf" target="_blank" rel="noopener noreferrer" class="cta">Abrir Currículum</a>
       </div>
     </div>
   </section>
-   <section id="profile">
-    <div class="profile container">
-        <div class="profile-top">
-            <h1 class="section-title" id="profile-title">PERFIL <span>PROFESIONAL</span></h1>
-            <p>Ingeniero en Sistemas con una sólida formación en desarrollo de software, administración de bases de datos y redes. He desarrollado proyectos académicos y
-               personales utilizando tecnologías como C#, JavaScript, SQL Server y Python, aplicando frameworks como ASP.NET Core y ASP.NET MVC. Poseo experiencia en la 
-               implementación de sistemas de gestión, desarrollo de APIs REST y optimización de bases de datos relacionales. Además, cuento con certificaciones en 
-               ciberseguridad, redes y desarrollo web, incluyendo CCNA y Ethical Hacking. Manejo herramientas como GitHub, Jira y Power BI, y tengo habilidades en análisis 
-               de datos, arquitectura de software y seguridad informática. Comprometido con la mejora continua, la automatización de procesos y el aprendizaje de nuevas 
-               tecnologías.</p>
+  <section id="skills">
+    <div class="skills container">
+      <div class="skills-top">
+        <h2 class="section-title" id="skills-title">habili<span>dades</span></h2>
+        <p>Las habilidades que he desarrollado se las debo a los proyectos que realicé en la universidad y a mis proyectos personales, pero sobre todo me gusta aprender nuevas tecnologías e innovar con ellas.</p>
+        <div class="skills-legend">
+          <span><i class="skill-dot level-intermediate-dot"></i> Intermedio</span>
+          <span><i class="skill-dot level-basic-dot"></i> Básico</span>
+        </div>
+      </div>
+      <div class="skills-bottom" id="skills-list"></div>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="projects container">
+        <div class="projects-header">
+            <h2 class="section-title" id="projects-title">Proyectos <span>Recientes</span></h2>
+        </div>
+        <div class="all-projects">
+            <div class="project-item">
+                <div class="project-info">
+                    <h3>Currículum Personal</h3>
+                    <h2>CV</h2>
+                    <p>Este es mi proyecto de página web para presentación personal y currículum.</p>
+                    <a href="https://github.com/Fgarita/Garita-CV.git" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
+                </div>
+                <div class="project-img">
+                    <div class="tech-review">
+                        <h2>Herramientas</h2>
+                        <ul>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>javascript</li>
+                            <li>github pages</li>
+                        </ul>
+                    </div>
+                    <img src="../images/Captura.PNG"/>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-info">
+                    <h3>Proyecto Final de Grado</h3>
+                    <h2>Proyecto Web Sigma</h2>
+                    <p>Desarrollado como proyecto final de mi carrera de Ingeniería en Sistemas, en colaboración con un pequeño equipo y un cliente real. El sistema cubre 
+                      cuatro funciones clave del negocio en una sola plataforma: agendado de citas para clientes, gestión de citas para empleados, control de inventario y 
+                      seguimiento financiero del negocio de lavado de autos — reemplazando lo que antes se manejaba manualmente con una sola herramienta web. Estuve a cargo 
+                      de la lógica backend en C# y ASP.NET MVC, conectada a una base de datos SQL Server diseñada para soportar los cuatro módulos</p>
+                       <a href="https://github.com/Fgarita/Proyecto-Sigma-Web.git" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
+                </div>
+                <div class="project-img">
+                    <div class="tech-review">
+                        <h2>Herramientas</h2>
+                        <ul>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>javascript</li>
+                            <li>C#</li>
+                            <li>Sqlserver</li>
+                            <li>GitHub</li>
+                            <li>Visual Studio</li>
+                            <li>.NET Framework</li>
+                        </ul>
+                    </div>
+                    <img src="../images/Captura2.PNG"/>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-info">
+                    <h3>Servicio Comunitario</h3>
+                    <h2>Asociación Comedor Infantil Cosechando Sonrisas</h2>
+                    <p>150 horas de trabajo comunitario para una organización sin fines de lucro que brinda alimentación a niños en situación de necesidad, como parte de mi 
+                      formación en Ingeniería en Sistemas Computacionales en la Universidad Fidélitas. Diseñé la base para un futuro Sistema de Gestión de Inventarios: análisis 
+                      de requisitos, una estructura de base de datos normalizada, un prototipo de interfaz para el registro de donaciones entrantes y salientes, y documentación 
+                      técnica completa para guiar al futuro equipo de desarrollo de la organización.</p>
+                </div>
+                <div class="project-img">
+                    <div class="tech-review">
+                        <h2>Herramientas</h2>
+                        <ul>
+                            <li>MySql</li>
+                            <li>Figma</li>
+                            <li>Análisis de Requisitos</li>
+                            <li>SQL Workbench</li>
+                        </ul>
+                    </div>
+                    <img src="../images/asocia.jpg"/>
+                </div>
+            </div>
+            <div class="project-item">
+  <div class="project-info">
+    <h3>CRUD en C++</h3>
+    <h2>Proyecto Personal</h2>
+    <p>Una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) completa en C++ con SQLite, que cubre todo el ciclo de vida de los datos: construcción dinámica de consultas SQL, 
+      creación automatizada de tablas, y validación de ID para bloquear actualizaciones o eliminaciones inválidas antes de que lleguen a la base de datos. Todo dentro de una 
+      interfaz de consola estilizada y fácil de usar. Este proyecto refleja mi capacidad para desarrollar soluciones robustas, eficientes y escalables respetando las buenas 
+      prácticas de desarrollo de software.</p>
+      <a href="https://github.com/Fgarita/CRUD_SQLite_With_C-_Using_sqlite.git" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
+  </div>
+  <div class="project-img">
+    <div class="tech-review">
+      <h2>Herramientas</h2>
+      <ul>
+        <li>SQLite</li>
+        <li>C++</li>
+        <li>Visual Studio</li>
+      </ul>
+    </div>
+    <img src="../images/salida_consala.PNG" />
+  </div>
+</div>
+<div class="project-item">
+  <div class="project-info">
+    <h3>Password Manager</h3>
+    <h2>Proyecto Personal</h2>
+    <p>
+      Un gestor de contraseñas de escritorio construido en Python. Guarda cada credencial en una base de datos local encriptada con AES, mantiene la clave de encriptación 
+      fuera del código usando variables de entorno, y cubre el ciclo completo de CRUD (agregar, ver, actualizar, eliminar) mediante una interfaz gráfica moderna hecha con 
+      Tkinter. Empaquetado como ejecutable independiente con PyInstaller, por lo que corre en Windows sin necesitar Python instalado — el tipo de diseño enfocado en seguridad 
+      que aprendí en mis certificaciones de Ethical Hacking y Ciberseguridad.
+      <a href="https://github.com/Fgarita/Password-Manager.git" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
+    </p>
+  </div>
+  <div class="project-img">
+    <div class="tech-review">
+      <h2>Herramientas</h2>
+      <ul>
+        <li>Python</li>
+        <li>SQLite</li>
+        <li>Visual Studio Code</li>
+        <li>Tkinter</li>
+        <li>PyInstaller</li>
+        <li>AES (Advanced Encryption Standard)</li>
+      </ul>
+    </div>
+    <img src="../images/password.PNG" />
+  </div>
+</div>
+<div class="project-item">
+  <div class="project-info">
+    <h3>Contact Company Jobs</h3>
+    <h2>Proyecto Personal</h2>
+    <p>
+      Una aplicación web que permite explorar una lista de empresas actualizada en tiempo real, con sus correos electrónicos y ubicación, obtenida automáticamente desde un 
+      documento en Google Sheets en formato CSV y mostrada en una tabla interactiva. Permite exportar a 4 formatos (CSV, Excel, PDF, portapapeles), además de búsqueda, 
+      ordenamiento y paginación en tiempo real sobre todo el conjunto de datos — sin necesidad de volver a subir nada cuando cambia la hoja de origen. Construido con Bootstrap 5 para un diseño responsivo y DataTables.js para la experiencia de navegación. Este proyecto destaca habilidades en integración de APIs, manipulación de datos dinámicos con JavaScript, y la creación de interfaces intuitivas para la consulta de información empresarial.
+      Este proyecto destaca habilidades en integración de APIs, manipulación de datos dinámicos con JavaScript, y la creación de interfaces intuitivas para la consulta de 
+      información empresarial.</p>
+      <a href="https://fgarita.github.io/JobShearch/" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
+  </div>
+  <div class="project-img">
+    <div class="tech-review">
+      <h2>Herramientas</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3 (Bootstrap 5)</li>
+        <li>Visual Studio Code</li>
+        <li>JavaScript (ES6+ y jQuery)</li>
+        <li>DataTables.js</li>
+        <li>Google Sheets API (CSV)</li>
+         <li>Fetch API</li>
+      </ul>
+    </div>
+    <img src="../images/contac.png" />
+  </div>
+</div>
         </div>
     </div>
 </section>
-<section id="objectives">
-    <div class="objectives container">
-        <div class="objectives-top">
-            <h1 class="section-title" id="objectives-title">OBJETIVOS <span>PROFESIONALES</span></h1>
-            <p>-Desarrollar experiencia en la industria tecnológica aplicando mis conocimientos en desarrollo de software, bases de datos y redes en entornos empresariales.<br>
-              -Especializarme en el desarrollo backend y arquitectura de software, utilizando tecnologías como C#, ASP.NET Core y SQL Server para crear soluciones escalables y seguras.<br>
-              -Ampliar mis conocimientos en ciberseguridad y redes, fortaleciendo mis habilidades en Ethical Hacking y CCNA para contribuir a la protección de sistemas y datos.<br>
-              -Optimizar procesos mediante la automatización y análisis de datos, utilizando herramientas como Power BI y Python para mejorar la toma de decisiones empresariales.<br>
-              -Contribuir al desarrollo de soluciones tecnológicas innovadoras, participando en proyectos que impacten positivamente en empresas y organizaciones.<br>
-              -Continuar con la capacitación y certificación en tecnologías clave, manteniéndome actualizado con las últimas tendencias en desarrollo de software, ciberseguridad y cloud computing.</p>
+<section id="experience">
+    <div class="experience container">
+        <div class="experience-top">
+            <h2 class="section-title" id="experience-title">EXPE<span>RI</span>ENCIA</h2>
+            <div class="accordion">
+                <h2 class="accordion-title-heading">
+                    <button type="button" class="accordion-title" aria-expanded="false" aria-controls="exp-vettel-content" id="exp-vettel-header">
+                      <div class="accordion-title-text">
+                        <span class="role">Desarrollador Backend — Proyecto Final de Carrera</span>
+                        <span class="accordion-meta">Vettel Car Wash · 2023</span>
+                      </div>
+                      <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </button>
+                </h2>
+                <div class="accordion-content" id="exp-vettel-content" role="region" aria-labelledby="exp-vettel-header">
+                 <div class="accordion-inner">
+                    <p>Desarrollado como culminación de mi carrera de Ingeniería en Sistemas Computacionales, trabajando con un
+                       pequeño equipo para un cliente real: un sistema de gestión de citas para un negocio de lavado de autos.
+                       Estuve a cargo del backend en C# y .NET Framework, conectado a una base de datos SQL Server, mientras el
+                       equipo construía la interfaz de agendado para el cliente en HTML, CSS y JavaScript.</p>
+                    <p>Responsabilidades y logros:</p>
+                    <ul>
+                      <li><strong>Diseño de Interfaz de Usuario:</strong> flujo de agendado intuitivo con HTML, CSS y JavaScript.</li>
+                      <li><strong>Desarrollo Backend:</strong> funcionalidad robusta en C# / .NET Framework para citas, inventario, perfiles de usuario y finanzas.</li>
+                      <li><strong>Gestión de Bases de Datos:</strong> diseño en SQL Server enfocado en integridad y confiabilidad de los datos.</li>
+                      <li><strong>Control de Versiones:</strong> flujo de trabajo colaborativo basado en GitHub con el equipo.</li>
+                      <li><strong>Entorno de Desarrollo:</strong> Visual Studio para edición, depuración y despliegue.</li>
+                    </ul>
+                 </div>
+                </div>
+            </div>
+            <div class="accordion">
+                <h2 class="accordion-title-heading">
+                    <button type="button" class="accordion-title" aria-expanded="false" aria-controls="exp-community-content" id="exp-community-header">
+                    <div class="accordion-title-text">
+                      <span class="role">Analista de Sistemas — Servicio Comunitario</span>
+                      <span class="accordion-meta">Asociación Comedor Infantil Cosechando Sonrisas · 2023</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+                    </button>
+                </h2>
+                <div class="accordion-content" id="exp-community-content" role="region" aria-labelledby="exp-community-header">
+                 <div class="accordion-inner">
+                    <p>150 horas de trabajo voluntario cumpliendo con el requisito de servicio comunitario de la Universidad
+                       Fidélitas, diseñando la base para un futuro Sistema de Gestión de Inventarios para una organización sin
+                       fines de lucro que brinda alimentación a niños en situación de necesidad.</p>
+                    <p>Responsabilidades y logros:</p>
+                    <ul>
+                      <li><strong>Análisis de Requisitos:</strong> identifiqué las necesidades de seguimiento de inventario de la organización.</li>
+                      <li><strong>Diseño de Bases de Datos:</strong> estructura eficiente para optimizar la gestión de inventarios.</li>
+                      <li><strong>Diseño de Interfaz:</strong> prototipo intuitivo para el registro de donaciones entrantes y salientes.</li>
+                      <li><strong>Prototipado del Sistema:</strong> un prototipo funcional para guiar el desarrollo futuro.</li>
+                      <li><strong>Documentación:</strong> documentación técnica detallada para el futuro equipo de desarrollo de la organización.</li>
+                    </ul>
+                 </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<section id="education">
+   <section id="education">
     <div class="education container">
         <div class="education-top">
-            <h1 class="section-title" id="education-title">FORMACIÓN <span>ACADEMICA</span></h1>
+            <h2 class="section-title" id="education-title">FORMACIÓN <span>ACADEMICA</span></h2>
             <div class="education-bottom">
                 <div class="education-item">
                     <div class="icon"><img src="../icons/fidelitas.png"/></div>
@@ -142,7 +377,7 @@
 <section id="certificates">
   <div class="certificates container">
     <div class="certificates-top">
-      <h1 class="section-title" id="certificates-title">CERI<span>FICADOS</span></h1>
+      <h2 class="section-title" id="certificates-title">CERI<span>FICADOS</span></h2>
       <p>A continuación se muestran algunos de los certificados que he obtenido durante mi trayectoria académica y profesional.</p>
     </div>
     <div class="certificates-bottom">
@@ -233,233 +468,9 @@
 </div>
 </div>
 </section>
-  <section id="skills">
-    <div class="skills container">
-      <div class="skills-top">
-        <h1 class="section-title" id="skills-title">habili<span>dades</span></h1>
-        <p>Las habilidades que he desarrollado se las debo a los proyectos que realicé en la universidad y a mis proyectos personales, pero sobre todo me gusta aprender nuevas tecnologías e innovar con ellas.</p>
-        <div class="skills-legend">
-          <span><i class="skill-dot level-intermediate-dot"></i> Intermedio</span>
-          <span><i class="skill-dot level-basic-dot"></i> Básico</span>
-        </div>
-      </div>
-      <div class="skills-bottom" id="skills-list"></div>
-    </div>
-  </section>
-  <section id="projects">
-    <div class="projects container">
-        <div class="projects-header">
-            <h1 class="section-title" id="projects-title">Proyectos <span>Recientes</span></h1>
-        </div>
-        <div class="all-projects">
-            <div class="project-item">
-                <div class="project-info">
-                    <h1>Currículum Personal</h1>
-                    <h2>CV</h2>
-                    <p>Este es mi proyecto de página web para presentación personal y currículum.</p>
-                    <a href="https://github.com/Fgarita/Garita-CV.git" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
-                </div>
-                <div class="project-img">
-                    <div class="tech-review">
-                        <h2>Herramientas</h2>
-                        <ul>
-                            <li>html</li>
-                            <li>css</li>
-                            <li>javascript</li>
-                            <li>github pages</li>
-                        </ul>
-                    </div>
-                    <img src="../images/Captura.PNG"/>
-                </div>
-            </div>
-            <div class="project-item">
-                <div class="project-info">
-                    <h1>Proyecto Final de Grado</h1>
-                    <h2>Proyecto Web Sigma</h2>
-                    <p>Desarrollado como proyecto final de mi carrera de Ingeniería en Sistemas, en colaboración con un pequeño equipo y un cliente real. El sistema cubre 
-                      cuatro funciones clave del negocio en una sola plataforma: agendado de citas para clientes, gestión de citas para empleados, control de inventario y 
-                      seguimiento financiero del negocio de lavado de autos — reemplazando lo que antes se manejaba manualmente con una sola herramienta web. Estuve a cargo 
-                      de la lógica backend en C# y ASP.NET MVC, conectada a una base de datos SQL Server diseñada para soportar los cuatro módulos</p>
-                       <a href="https://github.com/Fgarita/Proyecto-Sigma-Web.git" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
-                </div>
-                <div class="project-img">
-                    <div class="tech-review">
-                        <h2>Herramientas</h2>
-                        <ul>
-                            <li>html</li>
-                            <li>css</li>
-                            <li>javascript</li>
-                            <li>C#</li>
-                            <li>Sqlserver</li>
-                            <li>GitHub</li>
-                            <li>Visual Studio</li>
-                            <li>.NET Framework</li>
-                        </ul>
-                    </div>
-                    <img src="../images/Captura2.PNG"/>
-                </div>
-            </div>
-            <div class="project-item">
-                <div class="project-info">
-                    <h1>Servicio Comunitario</h1>
-                    <h2>Asociación Comedor Infantil Cosechando Sonrisas</h2>
-                    <p>150 horas de trabajo comunitario para una organización sin fines de lucro que brinda alimentación a niños en situación de necesidad, como parte de mi 
-                      formación en Ingeniería en Sistemas Computacionales en la Universidad Fidélitas. Diseñé la base para un futuro Sistema de Gestión de Inventarios: análisis 
-                      de requisitos, una estructura de base de datos normalizada, un prototipo de interfaz para el registro de donaciones entrantes y salientes, y documentación 
-                      técnica completa para guiar al futuro equipo de desarrollo de la organización.</p>
-                </div>
-                <div class="project-img">
-                    <div class="tech-review">
-                        <h2>Herramientas</h2>
-                        <ul>
-                            <li>MySql</li>
-                            <li>Figma</li>
-                            <li>Análisis de Requisitos</li>
-                            <li>SQL Workbench</li>
-                        </ul>
-                    </div>
-                    <img src="../images/asocia.jpg"/>
-                </div>
-            </div>
-            <div class="project-item">
-  <div class="project-info">
-    <h1>CRUD en C++</h1>
-    <h2>Proyecto Personal</h2>
-    <p>Una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) completa en C++ con SQLite, que cubre todo el ciclo de vida de los datos: construcción dinámica de consultas SQL, 
-      creación automatizada de tablas, y validación de ID para bloquear actualizaciones o eliminaciones inválidas antes de que lleguen a la base de datos. Todo dentro de una 
-      interfaz de consola estilizada y fácil de usar. Este proyecto refleja mi capacidad para desarrollar soluciones robustas, eficientes y escalables respetando las buenas 
-      prácticas de desarrollo de software.</p>
-      <a href="https://github.com/Fgarita/CRUD_SQLite_With_C-_Using_sqlite.git" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
-  </div>
-  <div class="project-img">
-    <div class="tech-review">
-      <h2>Herramientas</h2>
-      <ul>
-        <li>SQLite</li>
-        <li>C++</li>
-        <li>Visual Studio</li>
-      </ul>
-    </div>
-    <img src="../images/salida_consala.PNG" />
-  </div>
-</div>
-<div class="project-item">
-  <div class="project-info">
-    <h1>Password Manager</h1>
-    <h2>Proyecto Personal</h2>
-    <p>
-      Un gestor de contraseñas de escritorio construido en Python. Guarda cada credencial en una base de datos local encriptada con AES, mantiene la clave de encriptación 
-      fuera del código usando variables de entorno, y cubre el ciclo completo de CRUD (agregar, ver, actualizar, eliminar) mediante una interfaz gráfica moderna hecha con 
-      Tkinter. Empaquetado como ejecutable independiente con PyInstaller, por lo que corre en Windows sin necesitar Python instalado — el tipo de diseño enfocado en seguridad 
-      que aprendí en mis certificaciones de Ethical Hacking y Ciberseguridad.
-      <a href="https://github.com/Fgarita/Password-Manager.git" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
-    </p>
-  </div>
-  <div class="project-img">
-    <div class="tech-review">
-      <h2>Herramientas</h2>
-      <ul>
-        <li>Python</li>
-        <li>SQLite</li>
-        <li>Visual Studio Code</li>
-        <li>Tkinter</li>
-        <li>PyInstaller</li>
-        <li>AES (Advanced Encryption Standard)</li>
-      </ul>
-    </div>
-    <img src="../images/password.PNG" />
-  </div>
-</div>
-<div class="project-item">
-  <div class="project-info">
-    <h1>Contact Company Jobs</h1>
-    <h2>Proyecto Personal</h2>
-    <p>
-      Una aplicación web que permite explorar una lista de empresas actualizada en tiempo real, con sus correos electrónicos y ubicación, obtenida automáticamente desde un 
-      documento en Google Sheets en formato CSV y mostrada en una tabla interactiva. Permite exportar a 4 formatos (CSV, Excel, PDF, portapapeles), además de búsqueda, 
-      ordenamiento y paginación en tiempo real sobre todo el conjunto de datos — sin necesidad de volver a subir nada cuando cambia la hoja de origen. Construido con Bootstrap 5 para un diseño responsivo y DataTables.js para la experiencia de navegación. Este proyecto destaca habilidades en integración de APIs, manipulación de datos dinámicos con JavaScript, y la creación de interfaces intuitivas para la consulta de información empresarial.
-      Este proyecto destaca habilidades en integración de APIs, manipulación de datos dinámicos con JavaScript, y la creación de interfaces intuitivas para la consulta de 
-      información empresarial.</p>
-      <a href="https://fgarita.github.io/JobShearch/" target="_blank" rel="noopener noreferrer" class="py">ver proyecto</a>
-  </div>
-  <div class="project-img">
-    <div class="tech-review">
-      <h2>Herramientas</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3 (Bootstrap 5)</li>
-        <li>Visual Studio Code</li>
-        <li>JavaScript (ES6+ y jQuery)</li>
-        <li>DataTables.js</li>
-        <li>Google Sheets API (CSV)</li>
-         <li>Fetch API</li>
-      </ul>
-    </div>
-    <img src="../images/contac.png" />
-  </div>
-</div>
-        </div>
-    </div>
-</section>
-<section id="experience">
-    <div class="experience container">
-        <div class="experience-top">
-            <h1 class="section-title" id="experience-title">EXPE<span>RI</span>ENCIA</h1>
-            <div class="accordion">
-                <h2 class="accordion-title">
-                    <div class="accordion-title-text">
-                      <span class="role">Desarrollador Backend — Proyecto Final de Carrera</span>
-                      <span class="accordion-meta">Vettel Car Wash · 2023</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-down accordion-arrow"></i>
-                </h2>
-                <div class="accordion-content">
-                 <div class="accordion-inner">
-                    <p>Desarrollado como culminación de mi carrera de Ingeniería en Sistemas Computacionales, trabajando con un
-                       pequeño equipo para un cliente real: un sistema de gestión de citas para un negocio de lavado de autos.
-                       Estuve a cargo del backend en C# y .NET Framework, conectado a una base de datos SQL Server, mientras el
-                       equipo construía la interfaz de agendado para el cliente en HTML, CSS y JavaScript.</p>
-                    <p>Responsabilidades y logros:</p>
-                    <ul>
-                      <li><strong>Diseño de Interfaz de Usuario:</strong> flujo de agendado intuitivo con HTML, CSS y JavaScript.</li>
-                      <li><strong>Desarrollo Backend:</strong> funcionalidad robusta en C# / .NET Framework para citas, inventario, perfiles de usuario y finanzas.</li>
-                      <li><strong>Gestión de Bases de Datos:</strong> diseño en SQL Server enfocado en integridad y confiabilidad de los datos.</li>
-                      <li><strong>Control de Versiones:</strong> flujo de trabajo colaborativo basado en GitHub con el equipo.</li>
-                      <li><strong>Entorno de Desarrollo:</strong> Visual Studio para edición, depuración y despliegue.</li>
-                    </ul>
-                 </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <h2 class="accordion-title">
-                    <div class="accordion-title-text">
-                      <span class="role">Analista de Sistemas — Servicio Comunitario</span>
-                      <span class="accordion-meta">Asociación Comedor Infantil Cosechando Sonrisas · 2023</span>
-                    </div>
-                    <i class="fa-solid fa-chevron-down accordion-arrow"></i>
-                </h2>
-                <div class="accordion-content">
-                 <div class="accordion-inner">
-                    <p>150 horas de trabajo voluntario cumpliendo con el requisito de servicio comunitario de la Universidad
-                       Fidélitas, diseñando la base para un futuro Sistema de Gestión de Inventarios para una organización sin
-                       fines de lucro que brinda alimentación a niños en situación de necesidad.</p>
-                    <p>Responsabilidades y logros:</p>
-                    <ul>
-                      <li><strong>Análisis de Requisitos:</strong> identifiqué las necesidades de seguimiento de inventario de la organización.</li>
-                      <li><strong>Diseño de Bases de Datos:</strong> estructura eficiente para optimizar la gestión de inventarios.</li>
-                      <li><strong>Diseño de Interfaz:</strong> prototipo intuitivo para el registro de donaciones entrantes y salientes.</li>
-                      <li><strong>Prototipado del Sistema:</strong> un prototipo funcional para guiar el desarrollo futuro.</li>
-                      <li><strong>Documentación:</strong> documentación técnica detallada para el futuro equipo de desarrollo de la organización.</li>
-                    </ul>
-                 </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section id="currently-learning">
   <div class="currently-learning container">
-    <h1 class="section-title" id="currently-learning-title">APRENDIEND<span>O A</span>HORA</h1>
+    <h2 class="section-title" id="currently-learning-title">APRENDIEND<span>O A</span>HORA</h2>
     <div class="learning-item">
       <span class="learning-dot"></span>
       <p><strong>Inglés avanzado</strong> — Universidad Fidélitas, buscando mayor fluidez para comunicación técnica en equipos internacionales.</p>
@@ -469,27 +480,27 @@
 <section id="contact">
   <div class="contact container">
     <div class="contact-title">
-      <h1 class="section-title" id="contact-title">Información de <span>Contacto</span></h1>
+      <h2 class="section-title" id="contact-title">Información de <span>Contacto</span></h2>
     </div>
     <div class="contact-items">
       <div class="contact-item">
         <div class="icon"><img src="../icons/phone.png" alt="Ícono de Teléfono" /></div>
         <div class="contact-info">
-          <h1>Teléfono</h1>
+          <h3>Teléfono</h3>
           <h2>+506 83617399</h2>
         </div>
       </div>
       <div class="contact-item">
         <div class="icon"><img src="../icons/email.png" alt="Ícono de Correo Electrónico" /></div>
         <div class="contact-info">
-          <h1>Correo Electrónico</h1>
+          <h3>Correo Electrónico</h3>
           <h2><a href="mailto:frangarita@outlook.com" style="text-decoration:none">frangarita@outlook.com</a></h2>
         </div>
       </div>
       <div class="contact-item">
         <div class="icon"><img src="../icons/address.png" alt="Ícono de Dirección" /></div>
         <div class="contact-info">
-          <h1>Dirección</h1>
+          <h3>Dirección</h3>
           <h2>Heredia, Costa Rica</h2>
         </div>
       </div>
@@ -521,6 +532,14 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
   <section id="footer">
   <div class="footer container">
     <div class="social-icon">
