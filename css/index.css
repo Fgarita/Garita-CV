@@ -2229,3 +2229,177 @@ section[id] {
     bottom: 14px;
   }
 }
+
+/* ============================= */
+/* Modo oscuro                   */
+/* ============================= */
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+  background-color: #14181d;
+  color: #e6e9ec;
+}
+
+html[data-theme="dark"] section:not(#cover):not(#header) {
+  background-color: #14181d;
+}
+
+/* Textos generales que estaban en negro/gris oscuro (excluye el Home, que tiene su propio diseño con imagen de fondo) */
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] h1:not(#cover *),
+html[data-theme="dark"] h2:not(#cover *),
+html[data-theme="dark"] h3:not(#cover *),
+html[data-theme="dark"] p:not(#cover *),
+html[data-theme="dark"] .education-item h2,
+html[data-theme="dark"] .accordion-content p,
+html[data-theme="dark"] .accordion-content li {
+  color: #e6e9ec;
+}
+
+html[data-theme="dark"] .accordion {
+  border-color: #333c46;
+}
+
+html[data-theme="dark"] .accordion-content .accordion-inner {
+  background-color: #1a1f25;
+  border-top-color: #333c46;
+}
+
+html[data-theme="dark"] .accordion-content .accordion-inner,
+html[data-theme="dark"] .accordion-content .accordion-inner * {
+  color: #e6e9ec;
+}
+
+/* Tarjetas / fondos claros -> superficie oscura */
+html[data-theme="dark"] .skill-chip,
+html[data-theme="dark"] #contact .contact-form form,
+html[data-theme="dark"] #contact .contact-form .form-group input,
+html[data-theme="dark"] #contact .contact-form .form-group textarea,
+html[data-theme="dark"] .chatbot-suggestions,
+html[data-theme="dark"] #chatbot-messages,
+html[data-theme="dark"] .bot-message {
+  background-color: #1f252c;
+  border-color: #333c46;
+  color: #e6e9ec;
+}
+
+html[data-theme="dark"] #chatbot-box {
+  background-color: #1a1f25;
+}
+
+html[data-theme="dark"] .skill-chip {
+  color: #d8dde2;
+}
+
+html[data-theme="dark"] .certificates-item,
+html[data-theme="dark"] .project-item,
+html[data-theme="dark"] .contact-item,
+html[data-theme="dark"] .education-item {
+  background-color: #1f252c;
+}
+
+html[data-theme="dark"] #currently-learning .learning-item {
+  background-color: #1f252c;
+  border-color: #333c46;
+}
+
+html[data-theme="dark"] #currently-learning .learning-item p {
+  color: #e6e9ec;
+}
+
+html[data-theme="dark"] #skills .skill-chip:hover {
+  border-color: rgb(120, 190, 255);
+}
+
+html[data-theme="dark"] .cert-date {
+  color: #b7bec5;
+}
+
+html[data-theme="dark"] .accordion-meta {
+  color: #cdd3d9;
+}
+
+html[data-theme="dark"] a:not(#cover *):not(#header *) {
+  color: #7ec2ff;
+}
+
+html[data-theme="dark"] .cta:not(#cover *) {
+  color: #7ec2ff;
+  border-color: #7ec2ff;
+}
+
+/* Botón "Open Resume" en About me: necesita más especificidad para ganarle
+   a la regla original #about .col-right .cta { color: black; } */
+html[data-theme="dark"] #about .col-right .cta {
+  color: #7ec2ff;
+}
+
+/* Mantener oculto hasta hover el listado de herramientas de cada proyecto, igual que en modo claro */
+html[data-theme="dark"] .tech-review,
+html[data-theme="dark"] .tech-review h2,
+html[data-theme="dark"] .tech-review ul,
+html[data-theme="dark"] .tech-review ul li {
+  color: transparent !important;
+}
+
+html[data-theme="dark"] .tech-review:hover,
+html[data-theme="dark"] .tech-review:hover h2,
+html[data-theme="dark"] .tech-review:hover ul,
+html[data-theme="dark"] .tech-review:hover ul li {
+  color: white !important;
+}
+
+.language-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.flag-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
+@media only screen and (min-width: 1200px) {
+  .flag-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 1.4em;
+  height: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle i {
+  width: 1em;
+  text-align: center;
+}
+
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+@media only screen and (max-width: 1199px) {
+  #theme-toggle {
+    color: #fff;
+    font-size: 2.8rem;
+    width: 1.4em;
+    height: 1.4em;
+  }
+}

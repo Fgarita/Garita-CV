@@ -82,7 +82,6 @@ menu_item.forEach((item) => {
 document.addEventListener("DOMContentLoaded", () => {
   const accordions = document.querySelectorAll(".accordion-title");
   let lastScrollPosition = 0; // Variable para guardar la posición de desplazamiento
-
   accordions.forEach((title) => {
     title.addEventListener("click", () => {
       const accordion = title.closest(".accordion");
@@ -279,3 +278,36 @@ function sendMail(event) {
       }, 5000);
     });
 }
+
+// --- Modo oscuro ---
+(() => {
+  const root = document.documentElement;
+  const toggleBtn = document.getElementById("theme-toggle");
+  if (!toggleBtn) return;
+
+  const icon = toggleBtn.querySelector("i");
+
+  const applyTheme = (theme) => {
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark");
+      icon.className = "fa-solid fa-sun";
+    } else {
+      root.removeAttribute("data-theme");
+      icon.className = "fa-solid fa-moon";
+    }
+  };
+
+  const saved = localStorage.getItem("theme");
+  if (saved === "dark") {
+    applyTheme("dark");
+  }
+  // Si no hay preferencia guardada, siempre inicia en modo claro
+  // (ya no se detecta automáticamente el modo oscuro del sistema operativo)
+
+  toggleBtn.addEventListener("click", () => {
+    const isDark = root.getAttribute("data-theme") === "dark";
+    const next = isDark ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+  });
+})();
